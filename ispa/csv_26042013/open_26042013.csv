@@ -1,0 +1,189 @@
+Prof. P S Gandhi,Measure inertia tensor,"Design and Development of machine to experimentally measure inertia
+tensor of a rigid body",
+Balasubramaniam Kavaipatti,Making a fuel cell,,
+Balasubramaniam Kavaipatti,Finding Solar cell absorber material,,
+Balasubramaniam Kavaipatti,Assessing viability of modelling of energy harnessing through piezoelectric modules or bio-fuel in crowded places,,
+Sagar Mitra,Comparing  Greenhouse Gas Emissions of Modern Computing and Electronics Products,,
+Sagar Mitra,Simple modeling of lithium-ion battery,,
+Suryanarayan Doolla,Invertor (Interested students in this field can talk to him directly,,
+Manaswita Bose,Material characterization to study the coefficient of restitution.,,
+Manaswita Bose,Molecular dynamics simulation,,
+Deepak Malani Ph.D student under Virendra Singh,Dental Curing Torch,"If you ever had a dental cavity, and you got it treated upon, you would quickly understand what is being talked about.
+In most cases, a dentist uses a resin material (or a silver material), to fill in a dental cavity.
+The resin material is semi-solid in its original form. 
+This material is hardened (cured) by projecting a light of particular wavelength (in this case, blue colour) on it, for less than a minute. The process is called photo-polymerizatoin.
+
+The proposed project is to design a dental curing torch.
+The task would involve 
+a) driver circuits (for constant current source), 
+b) charging circuit (battery operated device),
+c) optics (for achieving desired focus and intensity)
+d) encapsulation design (water proof, sterilizable)
+",
+K.Karthikeyan Ph.D student under Hari B Hablani,Impact Angle constrained Lambert Guidance for missiles,"IT IS A PURELY SIMULATION BASED PROJECT
+Work Expected in two months
+
+FIRST MONTH
+- First Week - 
+First day - Introduction by me about the project.
+next 4 days - Will be given two chapters from a book, have to understand it.
+First Saturday - Presentation on the two chapters given
+Depending on the presentation
+Second week -  Will be given a paper to do Literature survey on Lambert Guidance, ICBM
+Second Saturday - Presentation on the Literature review
+Third week Day1 - Hand him two journal papers related to that field 
+Third Week Saturday - Presentation of the first journal paper
+Fourth week Saturday - Presentation of the second journal paper
+
+SECOND MONTH
+First Week - Generate the results given in the First journal paper
+First week Saturday - Presentation of the results + suggestions to modify
+Second Week - Generate the results given in the Second journal paper 
+Second week Saturday - Presentation of the results + suggestions to modify
+Third Week - Fusion of the two journal papers
+Fourth Week - Editing for Publications in reputed journals
+
+PLS NOTE : ALL THE PRESENTATIONS WILL BE ATTENDED BY PROFESSOR + RELATED PHD STUDENTS (my friends)",
+Madhusoodhanan C.G. Ph.D student under Prof. T.I. Eldho,Runoff Generation Mechanism studies in diverse Rainfall Regimes in the Western Ghats,"Develop Programmes for Hydrological Data Extraction and  Analysis  in Matlab and C 
+Extract spatial information of Hydrological stations from Google earth, Google maps etc and export to ARC GIS. ",
+Ashwin Arora Ph.D student under Prof. Santanu Banerjee,Petrographic characterization of black shales ,"Supervise thin section preparation, logs creation of assigned geographic region, observation of thin section, Polished sections (if required) study, documentation and interpretation.",
+Ishutesh Jain Ph.D student under Ranjith Padinhateeri,Theoretical Study of Tip Structure of Microtubules.,"This project is a Theoretical/Computational study which is set to understand the physics of Microtubules(MT) tip (see below for details). We will be applying techniques from statistical mechanics to understand the MT's tip structure and dynamics. This involve writing computer codes and doing massive simulations. Although, this project is motivated from a biological point, the tools used here are commonly applied to understand properties of various complex systems (from polymers to financial market!).
+
+About Project: Microtubules(MT) are tubular filament assemblies inside the cell that participate in cell division, transportation within the cell and various other cellular movements. They are the targets of most anti-cancer drugs which usually manipulate its dynamical properties. Also, there are several other 'regulatory' proteins which work similarly. It has been observed that dynamics of MT can be regulated by changing the properties of its 'tip'. Most of the MT targeting molecules (anti-cancer drugs and regulatory proteins) are speculated to work in this fashion.
+
+One project position is available for this project.",
+Gelli Ravikumar Ph.D student under Prof. S. A. Khaparde,Development of web enabled CIM oriented power system applications,"(1) Brief introduction: Common information model is a power system domain data standard, which defines semantics for all power system resources. To date, the existing systems are in proprietary in nature and it leads to interoperability issues. Therefore, there is an ample scope for developing CIM oriented applications for power systems.
+(2) Work status:
+The work is under progress, and there is a scope for carrying work by UGs. I will define the work that to be carried by the students (UGs once assigned). For your information, in brief, the work will be implementing the algorithms pertaining to power system applications (I’ll explain up to granularity). Presently, we are doing web enabled (or cloud based) software system for providing services kind to the power engineers. So, the work involves writing programs with web technologies (both server and client side). So, students should be well comfortable with web technologies.
+(3) Opportunity:
+The work will be greatly suitable to provide opportunity for CSE students. Opportunity is available for at max three students only for carrying this research work.
+",
+Gelli Ravikumar Ph.D student under Prof. S. A. Khaparde,Development of web enabled Dispatcher Training Simulator (DTS),"Brief Introduction: A dispatcher training simulator (DTS), also known as an operator training simulator, is a computer-based training system for operators (known as dispatchers) of electrical power grids. It performs this role by simulating the behaviour of the electrical network forming the power system under various operating conditions, and its response to actions by the dispatchers. Student dispatchers may therefore develop their skills from exposure not only to routine operations but also to adverse operational situations without compromising the security of supply on a real transmission system [source: wiki].
+Work to be carried:
+Students need to implement the existing algorithms for power systems applications pertaining to DTS. The work involves writing programs with web technologies (both server and client side)
+",
+Rahi Ph.D student under Bakul Rao,Analysis of the government health sector documents to understand its effect on the India's Diagnostic Services.,The project involves the contextual analysis of the various health ministry documents related to the diagnostic services to understand and determine the effect of the government decisions on the quality of the diagnostic services provided in the public sector labs. It will involve the collection of the various government documents and use of content analysis tool to analyse the documents.,
+Rahi  Ph.D student under Bakul Rao,Analysis of diagnostic technologies used for detection of bacterial diseases in India.,"The project involves visiting to various rural and urban area (in and around Mumbai) health centers, diagnostic centers and hospitals to understand the the process of performing diagnosis of bacterial diseases including the technologies used in the process. The identified technologies needs to be compared and analyzed using multi-criteria decision making tool, namely Analytic Hierarchy Process (AHP).The multiple criteria will involve parameters from techno-socio-economic domain. ",
+Ankit Ajit Jain Ph.D student under Anurag Mehra ,Coal Gasification,"a. Literature Survey
+b. Simulations
+c. Submit report",
+Sushant Mittal Ph.D student under Prof. Udayan Ganguly,Circuit Simulations of EDFinFET device architecture and comparing it against standard FinFET architecture,"We have proposed an alternate to FinFET architecture, named Epi Defined FinFET (EDFinFET). EDFinFET is high in performance and low in VT variability. Please refer to our following two publications for more details:
+http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6256997
+http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&arnumber=6466049&contentType=Conference+Publications
+We wish to work out circuit based analysis of this device and would like a UG student to lead this effort during summers and probably afterwards also. This would help us to make this a complete story.",
+Kunal Puri Ph.D student under Prabhu Ramachandran,Verification and Validation of non-Newtonian flows using PySPH,"The student will be involved in the verification, validation and optional development of a non Newtonian flow solver using the open source Smooth Particle Hydrodynamics package PySPH (http://pysph.googlecode.com).
+
+Proposed work outline:
+
+Weeks 1~2 : Introduction to SPH.  Setting up a simple problem with PySPH and examining results.
+
+Week 3~4 : Implementation aspects of SPH. Review of the current state-of-the-art SPH techniques for non Newtonian flows. 
+
+Week 5~6 : Comprehensive validation of PySPH against a suite of test problems.
+
+Week 7~8 : Development and extension of PySPH (optional) ",
+Kunal Puri Ph.D student under Prabhu Ramachandran,Parallel Smooth Particle Hydrodynamics (SPH) on GPUs,"The student/students will work with the Ph.D student in extending PySPH (http://pysph.googlecode.com) to use hardware acceleration on GPUs using OpenCL. 
+
+Proposed work outline:
+
+Weeks 1~2 : Introduction to SPH. Setting up a simple problem with PySPH and examining results.
+
+Weeks 2~3 : Implementation aspects of SPH. Design of PySPH and current OpenCL capability. Introduction to GPGPU programming. 
+
+Weeks 4~6 : Implementation of PySPH on the GPU within the new framework. 
+
+Weeks 7~8 : Extension to multiple GPU platforms (optional) ",
+Ashwin Arora Ph.D student under Prof. Santanu Banerjee,Effect of baking on black shales by an igneous pluton,"Thin section study for grain boundary association, maturity of organic content and lateral variation within baked (burnt) units",
+Dilawar Singh Ph.D student under Sachin Patkar,Logic synthesis,"1. An expression is given to you which is something like the following.
+
+a <= (b ^ c) + (clock == 1)(p) 
+
+Write a C-function which describes it. Student is expected to construct such statement from a given XML expression. 
+
+2. Given a spice-netlist of analog circuit, generate a topology in XML and verify some properties. ",
+Rwitajit Majumdar Ph.D student under Sahana Murty,Development of Mobile application for real-time Observation data analytics,"
+stage 1:
+Design an User Interface for capturing necessary data using specific
+observation protocol.
+Develop a framework for possible analytics on the captured data.
+Develop visualization schemes for data & information.
+
+stage 2:
+Develop a stand alone android/ios application for the capturing and
+analysing observation data based on the framework developed in stage 1.
+
+stage 3 (if the previous 2 stages are achieved in scheduled time):
+Develop a server based system which stores real-time multiple observer
+data and can be pinged to revert back aggregate analytics on captured
+data.",
+Gopal R Patil,Traffic flow model for road traffic in India.,Developing a traffic flow model for Indian Road Traffic( Currently Sreeta Gorripaty is working on this),
+Gopal R Patil,Virtual  Lab for Urban Transportation Systems Planning,Virtual  Lab for Urban Transportation Systems Planning,
+Gopal R Patil,Behavior of drivers at speed breakers,"Behavior of drivers at speed breakers
+Requirements:-
+Willingness to collect field data
+Skills: Statistical data analysis (distributions, regressions modeling, etc)
+CPI: Preferably above 8.0, but not less than 7.5
+",
+Prof Milind Sohoni,Framework for identifying inappropriate elements and problematic characteristics of Municipal Solid Waste Management in small and medium towns ,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,
+Prof Milind Sohoni,Impact assessment of a specific watershed interventions ,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,Analog Circuits
+Prof Milind Sohoni,Assessment of Technical Capacity Deficit in Implementation of MGNREGS,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,"IT IS A PURELY SIMULATION BASED PROJECT
+STUDENTS FROM ANY STREAM CAN DO THIS PROJECT
+COMPULSORY : Mathematical skills (Analytical and Numerical) , Coding skills (Matlab)
+NOT COMPULSORY :
+Knowledge of 
+Space Flight Mechanics,
+Aircraft Flight Dynamics,
+Missile Guidance.
+PLS NOTE : CURIOSITY and IMAGINATION is more required in research . So I am not expecting anything as of now.
+
+
+"
+Prof Milind Sohoni,Electricity supply to rural areas: status and impact ,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,"Programming Skills in Matlab and C
+ARC GIS
+"
+Prof Milind Sohoni, New groundwater policy and its implementation,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,Must have geology background and studied petrology as one of core subjects. Experience in petrography desired. 
+Prof Milind Sohoni,Study of factors impacting post-harvest losses for smallholdings,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,A good grasp on computer programming (e.g. C or C++ language) and elementary knowledge of Linux. Student should have strong interest in computer programming and physics. No prior understanding of Biology or Statistical Mechanics is expected.
+Prof Milind Sohoni, A study of efficacy of an IT literacy programme for the rural schools of Maharashtra (or any other state also),Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,"The work involves writing programs with web technologies (both server and client side). So, students should be well comfortable with web technologies.
+
+**The work will be greatly suitable to provide opportunity for CSE students**"
+Prof Milind Sohoni, Impact Assessment of National Science & Technology Policies on Actual Allocations and Practices,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,Students should be well comfortable with web technologies. The work will be greatly suitable to provide opportunity for CSE students
+Prof Milind Sohoni, Relevance of technology based teaching methods in publicly funded schools ,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,Willingness to learn new skills
+Prof Milind Sohoni,Efficacy and impacts of single-village drinking water schemes in the Poshiir river watershed,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,Basic knowledge of Biology and electronics is desirable but not mandatory. 
+Prof Milind Sohoni, Scoping malnutrition in selected talukas of Thane district for possible intervention through nutrition supplements,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,a. Inclined to research
+Prof Milind Sohoni,Financial Inclusion through Sustainable SHGs,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,"1. Should have taken basic device courses like EE112/EE207 and be familiar with basic functioning of MOSFET device so that he understands this work.
+2. Courses like EE204/EE207/EE221/EE224 would help him to figure what all circuit based simulations we need to do. If someone has done advanced courses like EE618 and System Design, it is an additional advantage. 
+Student mostly would be working on Sentarus simulator. "
+Prof Milind Sohoni,Creating an Archive of Oral Histories of the Working Class,Details at: http://www.ctara.iitb.ac.in/tdsl/spring-2013.html,"(a) Elementary knowledge of fluid mechanics CFD techniques
+
+(b) Capacity to read and understand research papers
+
+(c) An aptitude for programming (optional)
+
+(d) Honesty and integrity"
+,,,"(a) Elementary knowledge of fluid mechanics and CFD techniques 
+
+(b) Familiarity with GPGPU programming (CUDA, OpenCL)
+
+(c) Good programming skills 
+
+(d) Honesty and integrity "
+,,,Must have geology as major subject.
+,,,Parsing of XML is required in a language of student's choice. A course taken in Digital systems or Analog electronics is must. 
+,,,"according to most to moderate desirability
+
+Enthu to learn for and implement a small project within a deadline!
+
+Sound in programing logic.
+Interested in UIx design.
+
+Exposed to mobile app and/or server end program development."
+,,,"CPI : Preferably more than 8.5, but not less than 8.0
+Skills: Good programming and analytical skills"
+,,,"Skills: php and/or Java
+CPI: Preferably above 8.0, but not less than 7.5"
+,,,"
+Requirements:-
+Willingness to collect field data
+Skills: Statistical data analysis (distributions, regressions modeling, etc)
+CPI: Preferably above 8.0, but not less than 7.5
+"

@@ -1,0 +1,80 @@
+<?php
+session_start();
+require_once("functions.php");
+if (isset($_GET['logout'])){
+session_destroy();
+header("location : index.php");
+}
+if (isset($_POST['login'])){
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
+	if(ldap_auth($username,$password)){
+	$_SESSION['ldap_id']=$username; 
+		if (!(is_registered($username))){
+		header("location: register.php");
+		}
+		else{
+			header("location: apply.php");
+		}
+	}
+	else {
+		header("location: login.php?failed=true");
+	}
+}
+
+	
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" />
+<title>ISPA | Home</title>
+</head>
+<body id="body1">
+
+    <div class="container-fluid">
+	      <div class="page-header">
+		  <h1>ISPA</h1>
+		  <span style="display:inline; margin-left:2%; font-size:200%;">Institute Summer Project Allocation</span>
+		  </div>
+		  <ul class="nav nav-pills">
+		  <li><a href="index.php">Home</a></li>
+		   <li class="active"><a href="login.php">Apply</a></li>
+		  <li><a href="#">Updates/Results</a></li>
+		  <li><a href="ISPA_2014.pdf">Rule Book</a></li>
+		  <li><a href="login_review.php">Reviews</a></li>
+		  <li><a href="contacts.php">Contact</a></li>
+		  </ul>
+         
+         <div class="row-fluid"> 
+         <div class="contentlogin">
+<center>Keep calm! We are going to launch it soon!. 
+<br>Those who registered earlier by mistake will need to 
+register again.</center>		 
+<fieldset>
+				 
+			 <form method="POST" action="login.php">
+<center>
+				 <table style="font-size:16px;margin-left:40px;">
+		<tr>	<td>LDAP ID:</td> <td><input type='text' name='username'></td></tr>
+<tr><td>Password: </td> <td><input type='password' name='password'></td></tr>
+<tr><td><td><input type='submit' class="btn btn-primary btn-large" name='login' value='Login'></td></td></tr>
+</table>
+
+</center>
+</form>
+</fieldset>
+<div id='apply' style="font-size:16px;margin-left:240px;<strong>Last Date for Applying to ISPA is over"><strong></strong></div>
+		 </div>
+		 </div>
+		 
+		</div>
+		
+    
+</body>
+</html>

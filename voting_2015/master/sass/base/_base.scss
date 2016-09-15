@@ -1,0 +1,13 @@
+html {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body {
+	background-color: $light-bg;
+	color: $color-default;
+	font-family: $font-primary;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	margin: 0;
+}

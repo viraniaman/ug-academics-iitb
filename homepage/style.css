@@ -1,0 +1,56 @@
+body {
+	background-image: url('body_bg.jpg');
+	background-repeat: repeat-x;
+	padding : 40px;
+	font-family: Calibri,Verdana,sans-serif,Arial;
+	font-size:15px;
+}
+
+#container{
+	background-color: #FFFFFF;
+	background-image: url('page_bg.png');
+	background-repeat: repeat-x;
+	padding: 20px;
+	margin:auto;
+	width:900px;
+	border:2px solid #000000;
+	box-shadow: 5px 5px 5px;
+}
+
+#nav-fixed-left{
+	font-size: 20px;
+	font-variant: small-caps;
+	width: 180px;
+	z-index: 1000;
+	position: fixed;
+	left: 0px;
+	top: 50%;
+	padding: 10px;
+	text-decoration: none;
+}
+
+li {
+	margin-left: 20px;
+}
+
+h1,h2,h3 {
+	margin-top:0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+h1 {
+	font-variant: small-caps;
+}
+
+.divider {
+	clear: both;
+	background-image: url('divider.png');
+	background-repeat: repeat-x;
+	float: left;
+	height: 2px;
+	width:900px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

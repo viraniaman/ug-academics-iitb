@@ -1,0 +1,32 @@
+[
+    {
+        "age": 1, 
+        "id": "Why Career Cell ? Isnt PT Cell/Placement Cell enough ?", 
+        "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg", 
+        "name": "Motorola XOOM\u2122 with Wi-Fi", 
+        "snippet": "Career Cell aims to be IIT-B’s platform to provide our students with every bit of critical information about the plethora of career options , the myriad choices ahead of us and help us make a wise and informed career decision. We are NOT here to help you get a job but rather help you decide which one you wanna take up."
+    }, 
+    {
+        "age": 1, 
+        "id": "motorola-xoom", 
+        "imageUrl": "img/phones/motorola-xoom.0.jpg", 
+        "name": "MOTOROLA XOOM\u2122", 
+        "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
+    }, 
+    {
+        "age": 2, 
+        "carrier": "AT&amp;T", 
+        "id": "motorola-atrix-4g", 
+        "imageUrl": "img/phones/motorola-atrix-4g.0.jpg", 
+        "name": "MOTOROLA ATRIX\u2122 4G", 
+        "snippet": "MOTOROLA ATRIX 4G the world's most powerful smartphone."
+    }, 
+    {
+        "age": 3, 
+        "id": "dell-streak-7", 
+        "imageUrl": "img/phones/dell-streak-7.0.jpg", 
+        "name": "Dell Streak 7", 
+        "snippet": "Introducing Dell\u2122 Streak 7. Share photos, videos and movies together. It\u2019s small enough to carry around, big enough to gather around."
+    }
+
+]

@@ -1,0 +1,178 @@
+
+body
+{
+  background-image:URL("images/abstract_circles_background_1.jpg");
+}
+
+h1
+{
+  display: block;     
+  margin:auto;
+  background-color: #858d76;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align:center;
+  
+  font-family: 'Risque', cursive;;
+  font-size:40px;
+}
+
+#info
+{
+  display:block;
+  position:absolute;
+  width:600px;
+  left:280px;
+  top:100px;
+  font-family: 'Risque', cursive;;
+  font-size:30px;
+}
+
+
+ul
+{
+  position:absolute;
+  padding:0px;
+  left:50px;
+  top:100px;
+  list-style-type:none;
+}
+
+ol
+{
+  position:absolute;
+  padding:0px;
+  list-style-type:none;
+  width:920px;
+}
+
+li
+{
+  margin:15px;
+  border:2px solid black;  
+}
+
+.links
+{
+  display:block;
+  background-color:#858d76;
+  text-decoration:none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left:15px;
+  padding-right:15px;
+  font-family: 'Risque', cursive;
+  font-size:25px;
+  text-align:center;
+  color:black;
+}
+   
+.links:visited
+{
+  display:block;
+  background-color:#858d76;
+  text-decoration:none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left:15px;
+  padding-right:15px;
+  font-family: 'Risque', cursive;
+  font-size:25px;
+  text-align:center;
+  color:brown;
+}
+
+.links:hover
+{
+  display:block;
+  background-color:#5f5e4a;
+  text-decoration:none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left:15px;
+  padding-right:15px;
+  font-family: 'Risque', cursive;
+  font-size:25px;
+  text-align:center;
+  color:#d0d3a8;
+}
+
+table
+{
+  display:block; 
+  position: absolute ;
+  top:150px; 
+  left:300px; 
+  align:center; 
+  width:70%; 
+  border:0px;  
+  font-family: 'Risque', cursive;
+  font-size:25px;
+}
+
+group_body{
+	margin: 0px;
+	padding : 0px;
+}
+
+#astha{
+	display: inline-block;
+	margin-right:70px;
+}
+		
+#atulkar{
+	display: inline-block;
+	margin-left: 70px;
+}
+
+#both{
+	display: block;
+	text-align: center;
+}
+
+#ved{
+	display: block;
+	text-align: center;
+}
+
+#links{
+	text-decoration: none;
+	font-family: Tohoma;
+	font-size: 18px;
+	color: green;
+}
+
+#links:visited{
+	color: brown;
+}
+
+#links:hover{
+	color:red;
+}	
+
+#links:active{
+	color: blue;
+}
+
+#group_text{
+  color : brown;
+  font-family: "Comic Sans MS";
+	font-size: 18px;
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	color: #52003D;
+}
+
+#group_body{
+	background-image : url('background.jpg');
+	background-position : center;
+}
+
+#group_hr{
+	margin: auto;
+	margin-top : 5px;
+	margin-bottom: 5px;
+}
+
+

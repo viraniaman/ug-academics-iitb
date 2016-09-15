@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Risque';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Risque'), local('Risque-Regular'), url(http://themes.googleusercontent.com/static/fonts/risque/v1/a8AGA5XaSxGdEu0gkNB0cg.woff) format('woff');
+}

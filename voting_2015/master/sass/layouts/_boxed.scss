@@ -1,0 +1,19 @@
+/* Boxed Layout */
+body.boxed {
+	background-color: transparent;
+	background-position: 0 0;
+	background-repeat: repeat;
+	.body {
+		background-color: #FFF;
+		border-bottom: 5px solid $color-dark;
+		border-radius: 5px;
+		border-top: 5px solid #CCC;
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+		margin: 25px auto;
+		max-width: 1200px;
+		height: auto;
+	}
+	#header {
+		padding: 15px 0;
+	}
+}

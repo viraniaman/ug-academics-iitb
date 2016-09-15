@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Consult</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- CUSTOM STYLE CSS -->
+    <link rel="stylesheet" href="../old_career/Zerif - Responsive One Page Template_files/styles_zerif.css">
+
+    <link rel="stylesheet" type="text/css" href="../old_career/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../old_career/fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+
+
+    <link href="../css/style.css" rel="stylesheet">    
+    <link href="../css/local.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+<style type="text/css"></style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/header.js"></script>
+
+<script type="text/javascript" src="../js/local.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+    // $("#header").load("../header.html"); 
+    //$("#footer").load("../footer.html"); 
+    var page = GetURLParameter('page');
+    var content_file="./about.html";
+    if(page!=undefined){
+        content_file = "./"+page+".html";
+        $("#"+page).addClass("selected");
+    }
+    else {
+        $("#about").addClass("selected");
+    }
+    $("#content").load(content_file);
+});
+    function change_content(page){
+        //alert(page);
+        content_file = "./"+page+".html";
+        $("#content").load(content_file);
+        $("#side-header li").removeClass("selected");
+        $("#"+page).addClass("selected");
+    }
+</script> 
+</head>
+<body>
+   <div class="container"> 
+      <div id="header">
+      </div>
+    </div>
+   <div id="side-lines"><img src="../images/side-lines.png"></div>
+   <!--/.NAVBAR END-->
+   <div class="container">
+   <div class="row">
+        <div class="col-lg-3">
+            <ul class="nav navbar-nav side-nav" id="side-header">
+                <li class="heading" onclick="change_content('about');"><a href="#">CONSULT CLUB</a></li>
+                <li id="about" onclick="change_content('about');"><a href="#">ABOUT</a></li>
+                <li id="lecture-workshops" onclick="change_content('lecture-workshops');"><a href="#">LECTURES & WORKSHOPS</a></li>
+                <li id="competitions" onclick="change_content('competitions');"><a href="#">COMPETITIONS</a></li>
+                <li id="resources" onclick="change_content('resources');"><a href="#">RESOURCES</a></li>
+                <li><a href="../blog/?tag=consult"> BLOG</a></li>
+                <li id="about" onclick="change_content('projects');"><a href="#">PROJECTS</a></li>                
+                <li id="contact" onclick="change_content('contact');"><a href="#">CONTACT US</a></li>
+                <li class="footer-side" style="bottom:0%;">© 2014 WEB TEAM <br> IITB UGACADEMICS</li>
+            </ul>
+        </div>
+        <div id="content" class="col-lg-9">
+    </div>
+    </div> 
+    </div>          
+
+    <script src="../js/bootstrap.js"></script>
+
+</body></html>

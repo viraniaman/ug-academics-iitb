@@ -1,0 +1,50 @@
+/* Sort Source Wrapper */
+.sort-source-wrapper {
+	padding: 8px 0;
+	position: relative;
+	.nav {
+		margin: -100px 0 5px;
+		> li {
+			> a {
+				color: #FFF;
+				background: transparent;
+				&:hover, &:focus {
+					background: transparent;
+				}
+			}
+			&.active > a {
+				background: transparent;
+				&:hover, &:focus {
+					background: transparent;
+				}
+			}
+		}
+	}
+}
+
+/* Sort Source */
+.sort-source {
+	clear: both;
+}
+
+/* Sort Destination */
+.sort-destination {
+	&.full-width {
+		margin: 0 0 -81px;
+		position: relative;
+		top: -51px;
+		.isotope-item {
+			width: 20%;
+			float: left;
+			.img-thumbnail {
+				border: 0;
+				padding: 0;
+				margin: 0;
+			}
+			.img-thumbnail, a, .thumb-info img {
+				border-radius: 0;
+				float: left;
+			}
+	}
+	}
+}

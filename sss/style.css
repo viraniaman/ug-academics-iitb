@@ -1,0 +1,518 @@
+body{
+	
+	height: 100%;
+	
+}
+.rrr{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height:160px;
+	top: -0px;
+	overflow:hidden;
+	z-index: 3;
+}
+.rrr img{
+	top: px;
+	width: 100%;
+	height: 100%;
+	display:block;
+	margin: auto;
+
+}
+.sub{
+	position: absolute;
+	
+	top: 150px;
+	width: 25%;
+	height: 800px;
+	border-right:1px solid green;
+	left:25%;
+	padding-top:20px;padding-left: 10px;
+	overflow: hidden;
+
+}
+.left1{
+	position: absolute;
+	top: 150px;
+	left: 2%;
+	border-left: px solid;
+	border-right:1px solid green;
+	width: 20%;
+	height: 120%;padding-top:20px;padding-left: 20px;padding-right: 20px;
+}
+.right11{
+
+position: absolute;
+	top: 150px;
+	left: 30%;
+	border-left: px solid;
+	border-right:1px solid green;
+	width: 60%;
+	height: 120%;padding-top:20px;padding-left: 20px;padding-right: 20px;
+
+}
+.left1 li {
+border-bottom-color: #000087;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+padding-bottom: 6px;
+padding-top: 5px;
+
+}
+.right1{
+	position: absolute;
+	top: 150px;
+	left:52%;
+	height: 800px;
+	border-right:1px solid green;
+	width: 40%; padding-top:20px;overflow: hidden;padding-left: 5px;
+	padding-right: 5px;
+}
+.reg{
+	position:absolute;
+	top:215px;
+	height:300px;
+	left:33%;
+	width:30%;
+	border:px solid black;
+}
+
+
+#apDiv1 {
+	position: absolute;
+	left: 5%;
+	top: 170px;
+	width: 80px;
+	height: 80px;
+	border:px solid black;
+	z-index: 1;
+}
+#apDiv2 {
+	position: absolute;
+	left: 5%;
+	top: 250px;
+	width: 80px;
+	height: 80px;
+	border:px solid black;
+	z-index: 1;
+}
+#apDiv3 {
+	position: absolute;
+	left: 5%;
+	top: 330px;
+	width: 80px;
+	height: 80px;
+	border:px solid black;
+	z-index: 1;
+}
+#apDiv4 {
+	position: absolute;
+	left: 5%;
+	top: 410px;
+	width: 80px;
+	height: 80px;
+	z-index: 1;
+	border:px solid black;
+}
+#apDiv5 {
+	position: absolute;
+	left: 5%;
+	top: 490px;
+	width: 80px;
+	height: 80px;
+	z-index: 1;
+	border:px solid black;
+}
+#apDiv6 {
+	position: absolute;
+	right: 5%;
+	top: 170px;
+	width: 80px;
+	height: 80px;
+	
+	border:px solid black;
+	z-index: 1;
+}
+#apDiv7 {
+	position: absolute;
+	right: 5%;
+	top: 250px;
+	width: 80px;
+	height: 80px;
+	border:px solid black;
+	z-index: 1;
+}
+#apDiv8 {
+	position: absolute;
+	right: 5%;
+	top: 330px;
+	width: 80px;
+	height: 80px;
+	z-index: 1;
+	border:px solid black;
+}
+#apDiv9 {
+	position: absolute;
+	right: 5%;
+	top: 410px;
+	width: 80px;
+	height: 80px;
+	z-index: 1;
+	border:px solid black;
+}
+#apDiv99 {
+	position: absolute;
+	right: 5%;
+	top: 490px;
+	width: 80px;
+	height: 80px;
+	z-index: 1;
+	border:px solid black;
+}
+
+
+#apDiv100 {
+	position: absolute;
+	right: 15%;
+	top: 170px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+	background-color: #001527;
+	color: white;
+}
+#apDiv110 {
+	position: absolute;
+	right: 15%;
+	top: 250px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+#apDiv120 {
+	position: absolute;
+	right: 15%;
+	top: 330px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+	#apDiv130 {
+	position: absolute;
+	right: 15%;
+	top: 410px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+	#apDiv140 {
+	position: absolute;
+	right: 15%;
+	top: 490px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#apDiv10 {
+	position: absolute;
+	left: 15%;
+	top: 170px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+	background-color: #001527;
+	color: white;
+}
+#apDiv11 {
+	position: absolute;
+	left: 15%;
+	top: 250px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+#apDiv12 {
+	position: absolute;
+	left: 15%;
+	top: 330px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+	#apDiv13 {
+	position: absolute;
+	left: 15%;
+	top: 410px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+	#apDiv14 {
+	position: absolute;
+	left: 15%;
+	top: 490px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+	display:none;
+	border:px solid black;
+	overflow: hidden;
+background-color: #001527;
+	color: white;}
+
+	.box{
+		position: relative;
+		top:20px;
+		border-color: #001527;
+	}
+
+
+
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#apDiv15 {
+   -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+	position: absolute;
+	left: 15%;
+	top: 300px;
+	width: 100px;
+	height: 100px;
+	z-index: 1;
+}
+#apDiv16 {
+   -webkit-animation-name: blink;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-duration: 1s;
+	position: absolute;
+right: 15%;	top: 300px;
+	width: 100px;
+	height: 100px;
+	z-index: 1;
+
+}
+.admin{
+  position: absolute;
+  top: 95px;
+  right:5%;
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 3px;
+}
+.admin :hover{
+  color:white;
+}
+#apDiv17 {
+	position: absolute;
+	left: 12%;
+	top: 180px;
+	width: 40px;
+	height: 40px;
+	z-index: 1;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+}
+#apDiv18 {
+	position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+	left: 12%;
+	top: 260px;
+	width: 40px;
+	height: 40px;
+	z-index: 1;
+}
+#apDiv19 {
+  position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+  left: 12%;
+  top: 340px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+#apDiv20 {
+  position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+  left: 12%;
+  top: 420px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+#apDiv21 {
+  position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+left: 12%;  top: 500px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+#apDiv22 {
+  position: absolute;
+right: 12%;  top: 180px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+}
+#apDiv23 {
+  position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+right: 12%;  top: 260px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+#apDiv24 {
+  position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+  right: 12%;
+  top: 340px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+#apDiv25 {
+  position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+right: 12%;  top: 420px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+#apDiv26 {
+  position: absolute;
+  -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+  right: 12%;
+  top: 500px;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+#bodyy{
+position: absolute;
+display: block;
+margin: auto;
+top:0%;
+width:86%;
+height: 90%;
+left: 7%;
+border-left: 3px solid green;
+border-right: 3px solid green;
+
+}
+
+#kkk{
+position: absolute;
+display: block;
+margin: auto;
+top:0%;
+width:86%;
+height: 90%;
+left: 7%;
+border-left: 3px solid green;
+border-right: 3px solid green;
+
+
+	
+}
+
+
+
+
+
+
+#footer{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 20px;color: white;
+	background-color: black;
+	border-top: 1px solid black;
+	opacity: 0.8;
+
+
+
+}

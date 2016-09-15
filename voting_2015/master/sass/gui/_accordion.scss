@@ -1,0 +1,25 @@
+/* Accordion */
+.panel-group {
+	.panel-heading {
+		padding: 0;
+		a {
+			display: block;
+			padding: 10px 15px;
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+			[class^="icon-"] {
+				margin-right: 4px;
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
+	&.secundary {
+		.panel-heading {
+			a {
+				color: #FFF;
+			}
+		}
+	}
+}

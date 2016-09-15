@@ -1,0 +1,32 @@
+/* Parallax */
+.parallax {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	width: 100%;
+	margin: 70px 0;
+	padding: 50px 0;
+	&.disabled {
+		background-size: auto;
+	}
+	blockquote {
+		border: 0;
+		padding: 0 10%;
+		i.icon-quote-left {
+			font-size: 34px;
+			position: relative;
+			left: -5px;
+		}
+		p {
+			font-size: 24px;
+			line-height: 30px;
+		}
+		span {
+			font-size: 16px;
+			line-height: 20px;
+			color: #999;
+			position: relative;
+			left: -5px;
+		}
+	}
+}

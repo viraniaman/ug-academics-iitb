@@ -1,0 +1,19 @@
+.form-horizontal .form-group {
+margin-left: -15px;
+margin-right: -15px;
+float: left;
+margin-left: 100px;
+width: 350px;
+}
+.wrapdiv{
+	width:100%;
+	margin-left: 10px;
+
+}
+.project{
+	float: left;
+}
+.smallbutton{
+	width: 250px;
+	
+}

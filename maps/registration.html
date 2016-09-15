@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-sale=1.0">
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+	    <link href="./css/style.css" rel="stylesheet">  
+	    <link href="./css/local.css" rel="stylesheet" type="text/css">
+	    <link href="my.css" type="text/css" rel="stylesheet" >
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+		
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("#header").load("./header.html"); 
+  $("#footer").load("./footer.html"); 
+});
+
+
+
+
+// $('#addNewProj').live('click', function() {
+// 		$('<div id="project"><input type="text" style="width:500px" id="proj" name="proj_' + j +'" value="" placeholder="Project" /> <br> <input type="text" style="width:247px" id="pperiod" name="pperiod_' + j +'" value="" placeholder="Project Period" /> <input type="text" style="width:247px" id="prof" name="prof_' + j + '" value="" placeholder="Project Guide" /><br><textarea style="width:500px" rows="5" id="projdesc"  name="projdesc_' + j +'" value="" placeholder="Project Description"></textarea>&nbsp;<button class="btn" style="color:black;" id="remProj">Remove</button><br></div>').appendTo(divProj);
+// 		j++;
+// 		return false;
+// 	});
+// // Remove Project
+// 	$('#remProj').live('click', function() {
+// 		if( j >= 1 ) {
+// 			$(this).parents('#projentry').remove();
+// 			j--;
+// 		}
+// 		return false;
+// 	});
+
+</script>	
+</head>
+
+	<body>
+  <hr>
+    <div class="container">
+      <div id="header">
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-2 wrapdiv">
+          <div class="page-header">
+            <h2> Sign Up to continue to Research ID</h2>
+          </div>
+           
+           
+
+         <form class="form-horizontal" method="post" action="">
+         
+           <div class="form-group">
+           <label>Full Name</label>
+           <input class="form-control"  maxlength="255" name="name" placeholder="Full Name" required="required" type="text">
+           </div>
+
+           <div class="form-group">
+           <label>Department</label>
+           <select class="form-control select2-offscreen" name="department" placeholder="Department" required="required" style="width:100%" tabindex="-1">
+			<option value="1">Computer Science and Engineering</option>
+			<option value="2">Electrical Engineering</option>
+			<option value="3">Aerospace engineering</option>
+			<option value="4">Biosciences and Bioengineering</option>
+			<option value="5">Chemical Engineering</option>
+			<option value="6">Chemistry</option>
+			<option value="7">Earth sciences</option>
+			<option value="8">Energy sciences</option>
+			<option value="9">Humanities and social science</option>
+			<option value="10">Industrial Design center</option>
+			<option value="11">Physics</option>
+			<option value="12">Metallurigical engineering</option>
+			<option value="13">Other</option>
+			<option value="14">Mechanical engineering</option>
+			<option value="15">Civil Engineering</option>
+			</select>
+			</div>
+
+		    <div class="form-group">
+		    <label>Date of Birth</label>
+		    <input class="form-control"  maxlength="255" name="dob" placeholder="Date of Birth" required="required" type="text">
+		   </div>
+
+            <div class="form-group">
+            <label>Year of joining</label>
+            <select class="form-control select2-offscreen" name="yoj" placeholder="Year of joining" required="required" style="width:100%" tabindex="-1">
+			<option value="1">2010</option>
+			<option value="2">2011</option>
+			<option value="3">2012</option>
+			<option value="4">2013</option>
+			<option value="5">2014</option>
+			<option value="5">2015</option>
+			</select>
+			</div>
+
+
+			<div class="form-group">
+			<label>Hostel No.</label>
+			<select class="form-control select2-offscreen" name="hostel" placeholder="Hostel" required="required" style="width:100%" tabindex="-1">
+			<option value="1">Hostel 1</option>
+			<option value="2">Hostel 2</option>
+			<option value="3">Hostel 3</option>
+			<option value="4">Hostel 4</option>
+			<option value="5">Hostel 5</option>
+			<option value="6">Hostel 6</option>
+			<option value="7">Hostel 7</option>
+			<option value="8">Hostel 8</option>
+			<option value="9">Hostel 9</option>
+			<option value="10">Hostel 10</option>
+			<option value="11">Hostel 11</option>
+			<option value="12">Hostel 12</option>
+			<option value="13">Hostel 13</option>
+			<option value="14">Hostel 14</option>
+			<option value="15">Hostel 15</option>
+			<option value="15">Hostel 16</option>
+			</select>
+
+			</div>
+			<div class="form-group">
+			<label>Room no.</label>
+			<input class="form-control" maxlength="10" name="room" placeholder="Room No." required="required" type="text">
+			</div>
+
+			<div class="form-group">
+			<label>Email</label>
+			<input class="form-control"  maxlength="75" name="email" placeholder="Email" required="required" type="text">
+			</div>
+
+            <div class="form-group">
+            <label>Year of Study</label>
+            <select class="form-control select2-offscreen" name="yos" placeholder="Year of study" required="required" style="width:100%" tabindex="-1">
+			<option value="1">1st year</option>
+			<option value="2">2nd year</option>
+			<option value="3">3rd year</option>
+			<option value="4">4th year</option>
+			<option value="5">5th year</option>
+			</select>
+			</div>
+
+          	<div class="form-group">
+          	<label>Degree</label>
+          	<select class="form-control select2-offscreen" name="degree" placeholder="Degree" required="required" style="width:100%" tabindex="-1">
+  			<option>B.Tech</option>
+  			<option>M.Tech</option>
+  			<option>Ph.D</option>
+          	</select>
+          	</div>
+
+			<div class="form-group">
+			<label>Mobile No.</label>
+			<input class="form-control"  maxlength="10" name="mobile" placeholder="Mobile No." required="required" type="text">
+			</div>
+
+
+ 			<div class="project" >
+ 			<h4 style="margin-left:100px;"><label>Projects</label></h4>
+			<div class="form-group">
+			
+			<input class="form-control" maxlength="200" name="project" placeholder="Tittle of Project" type="text">
+			</div>
+
+
+			<div class="form-group">
+			<input class="form-control"  maxlength="200" name="mobile" placeholder="Project Period" type="text">
+			</div>
+
+            <div class="form-group">
+            <select class="form-control select2-offscreen"  name="projecttype" placeholder="Type of Project" required="required" style="width:100%" tabindex="-1">
+			<option value="1">Internship</option>
+			<option value="2">Course project</option>
+			<option value="3"> BTP</option>
+			<option value="4">Thesis</option>
+			<option value="5">Other</option>
+			</select>
+			</div>
+			<div class="form-group">
+			<input class="form-control" maxlength="200" name="guide" placeholder="Guide" type="text">
+			</div>
+			<div class="form-group">
+			<input class="form-control" maxlength="10" name="course" placeholder="Course" type="text">
+			</div>
+			<div class="form-group">
+			<input class="form-control" maxlength="200" name="lnkdoc" placeholder="Link of Some Documents" type="text">
+			</div>
+			<div class="form-group">
+			<input class="form-control" style="width:100%" placeholder="Link of Some Documents" type="File">
+			</div>
+			<div class="form-group">
+			<button id="addNewProj">Add</button>
+			</div>
+			</div>
+			
+			
+
+			<div class="form-group">
+			<label>Research Interest</label>
+			<input class="form-control"  maxlength="200" name="researchint" placeholder=" Research Interest" type="text">
+			</div>
+
+			<div class="form-group">
+			<label>Project Tag</label>
+			<input class="form-control" id="id_mobile" maxlength="200" name="projecttag" placeholder="Project Tag" type="text">
+			</div>
+
+
+
+              <button type="submit" class="btn btn-success btn-lg btn-block">Sign up</button>
+            </form>
+          </div>
+        </div>
+    </div>
+         <footer>
+        
+    </footer>
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

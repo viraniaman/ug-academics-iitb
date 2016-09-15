@@ -1,0 +1,18 @@
+Prof. K. P. Karunakaran,Coaxial Rotor Helicopter,This is in-line with Professor's vision to develop a tail-less helicopter. The ultimate (long term) goal is to develop a compact helicopter that can serve as a personal transport vehicle. Project is at an advanced stage and testing is expected to start at May end. Work mainly involves mechanical system design and fabrication. ,"Student must be passionate, sincere and willing to put in effort. Knowledge of CAD software (specially Pro-E) is a plus. "
+Prof. K. P. Karunakaran,Micro Aerial Vehicle (MAV),"The Micro Aerial Vehicle in question here is a Tricopter with three pairs of contra-rotating blades. This project is much more difficult than the conventional quadcopter due to the challenging task of stabilizing its flight. Project also involves working on the electronics on the MAV (Microcontroller board, sensors and motor controllers). ","Student must be passionate, sincere and willing to put in effort. Some prior knowledge of control systems, electronic system design is a plus. "
+Prof. K. P. Karunakaran,DelCAM,DelCAM is a CAD/CAM software tool. There is an existing code in C++ that does a certain 'slicing' operation on CAD models. It is desired to rewrite this software using DelCAM's API and thus integrate this functionality into the package. ,"Student must be passionate, sincere and willing to put in effort and learn. Some prior knowledge of DelCAM (or any other CAD/CAM software) would be an advantage. Basic knowledge of C and C++ is a must. "
+B. Ravi,CAD Feature Recognition,"• Given a solid model, identify all the holes in the given model
+• Create solids from the identified holes
+• Determine hole parameters (e.g. through/blind, maximum & minimum diameter, length)
+• Development Environment: SolidWorks API, C#, .Net 3.5 ","• Exposure to solid modelling kernels  
+• Programming experience in C++ or C# 
+"
+Prof. Krishna Jonnalagadda,Electromechanical properties of multifunction polymeric films,"Experimental investigation of multifunctional materials
+","2nd year completed
+"
+Prof. Krishna Jonnalagadda,Fatigue failure in crystalline metals - a microscale study,"Experimental investigation of metals at the microscale/numerical simulations
+","2nd year completed
+"
+Prof. Krishna Jonnalagadda,Development of novel membrane deflection experimemnt,"Experimental investigation of thin film membrames under biaxial tension
+","2nd year completed
+"

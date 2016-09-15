@@ -1,0 +1,113 @@
+/* Miscellaneous */
+body a {
+	outline: none !important;
+}
+
+li {
+	line-height: 24px;
+}
+
+.center {
+	text-align: center;
+}
+
+.push-bottom {
+	margin-bottom: 35px;
+}
+
+.push-top {
+	margin-top: 35px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.inverted {
+	color: #FFF;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Clearfix */
+.clearfix {
+	display: inline-block;
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+/* Divider Line */
+hr {
+	@include background-image(linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent));
+	border: 0;
+	height: 1px;
+	margin: 22px 0 22px 0;
+	&.short {
+		margin: 11px 0 11px 0;
+	}
+	&.tall {
+		margin: 44px 0 44px 0;
+	}
+	&.taller {
+		margin: 66px 0 66px 0;
+	}
+	&.light {
+		@include background-image(linear-gradient(left, transparent, rgba(255, 255, 255, 0.2), transparent));
+	}
+}
+
+/* Read More */
+.read-more,
+.learn-more {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+/* Offset Anchor */
+.offset-anchor {
+	display: block;
+	position: relative;
+	visibility: hidden;
+	top: -100px;
+}
+
+/* Show Grid */
+.show-grid [class*="col-md-"] .show-grid-block {
+	background-color: #EEE;
+	line-height: 40px;
+	min-height: 40px;
+	text-align: center;
+	border: 1px solid #FFF;
+	display: block;
+}
+
+/* Font Awesome */
+.fontawesome-icon-list {
+	[class*="col-md-"] {
+		margin-bottom: 9px;
+	}
+	i {
+		font-size: 1.3em;
+		margin-right: 5px;
+		display: inline-block;
+		width: 30px;
+		text-align: center;
+		position: relative;
+		top: 2px;
+	}
+}

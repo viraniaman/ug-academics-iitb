@@ -1,0 +1,16 @@
+[
+	{
+		"subject":"maths",
+		"date":"30-March-2014", 
+		"venue":"lch1",
+		"timings":"6 to 8 pm",
+		"ta":"aaa"
+	},
+	{
+		"subject":"chem",
+		"date":"2-april-2014", 
+		"venue":"mb",
+		"timings":"10 t0 11pm",
+		"ta":"ccc"
+	}
+]

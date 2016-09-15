@@ -1,0 +1,33 @@
+<li class="dropdown">
+									<a class="dropdown-toggle" href="index.html#manifesto">
+										See Manifestos
+										<i class="icon icon-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										
+<li><a href="index.html#list1">Dept. General Secretary</a></li>
+										<li><a href="index.html#list2">MMA General Secretary</a></li>
+<li><a href="index.html#list3">Joint Secretary (UG)</a></li>
+<li><a href="index.html#list4">PG Representative</a></li>
+<li><a href="index.html#list5">CR (3rd year) </a></li>
+<li><a href="index.html#list6">CR (2nd year) )</a></li>
+										</ul>
+								</li>
+
+---------------
+
+<div class="container" id="manifesto">
+			
+
+					<ul class="nav nav-pills sort-source" data-sort-id="team" data-option-key="filter">
+<li><a href="index.html#manifesto">Show all</a></li>
+						<li><a href="index.html#list1">Dept. General Secretary</a></li>
+										<li><a href="index.html#list2">MMA General Secretary</a></li>
+<li><a href="index.html#list3">Joint Secretary (UG)</a></li>
+<li><a href="index.html#list4">PG Representative</a></li>
+<li><a href="index.html#list5">CR (3rd year) </a></li>
+<li><a href="index.html#list6">CR (2nd year) )</a></li>
+					</ul>
+
+					<hr />
+</div>

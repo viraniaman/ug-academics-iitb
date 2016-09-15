@@ -1,0 +1,26 @@
+/* Scroll to Top */
+.scroll-to-top {
+	@include transition (all 0.3s);
+	background: #404040;
+	border-radius: 7px 7px 0 0;
+	bottom: 0px;
+	color: #FFF;
+	display: block;
+	height: 9px;
+	opacity: 0;
+	padding: 13px 0 35px;
+	position: fixed;
+	right: 10px;
+	text-align: center;
+	text-decoration: none;
+	width: 49px;
+	z-index: 1040;
+	&:hover {
+		filter: alpha(opacity = 100);
+		opacity: 1;
+	}
+	&.visible {
+		filter: alpha(opacity = 75);
+		opacity: 0.75;
+	}
+}

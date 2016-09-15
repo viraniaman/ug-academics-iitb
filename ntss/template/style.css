@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
+@import url('nav.css');
+
+body{ padding:0; margin:0; color:#666666; font-family: 'Open Sans', sans-serif; background:url(../images/homeBg.gif) repeat-x 0 0;}
+
+div, p, form, ul, li, h1, h2, h3, h4, h5, h6, a, span, form, img, br, input, textarea, label, dl, dt, dd { padding:0; margin:0; }
+
+a, input { text-decoration:none; outline:none;}
+
+img {border:0; outline:none;}
+
+ul{list-style-type:none;}
+	
+*:focus{ outline:none;}	
+	
+.clear{clear:both; line-height:0 !important; font-size:0 !important; height:0px !important;}
+
+.left{ float:left;}
+.right{ float:right !important;}
+.block{ display:block;}
+.inlineblock{ display:inline-block;}
+.relative{ position:relative}
+.absolute{ position:absolute;}
+.bdrT{border-top:1px solid #dadada;}
+.bdrB{border-bottom:1px solid #b5b5b5;}
+
+.text{ font-family: 'Open Sans', sans-serif; font-size:18px; color:#536e00; font-weight:600;}
+.text2{color: #598103; font: bold 14px Tahoma, Geneva, sans-serif;}
+
+.link{ color:#f8931d; font:normal 12px/18px Tahoma, Geneva, sans-serif; text-decoration:underline;}
+.link:hover{ text-decoration:none;}
+.link3{ color:#598103; font:normal 12px/18px Tahoma, Geneva, sans-serif; text-decoration:none;}
+.link3:hover{ text-decoration:underline;}
+.pdfLink{ background:url(../images/pdfIcon.gif) no-repeat 0 0; padding:7px 0 8px 30px; color:#000; font:normal 12px/18px Tahoma, Geneva, sans-serif; text-decoration:none;}
+.pdfLink:hover{ text-decoration:underline;}
+
+
+/*------------------------------------------------------------------*/
+
+.center, .center2, .center3{ width:100%; max-width:980px; margin:0 auto; position:relative; }
+.topBannerHolder{ position:relative;}
+
+
+.topPanel{ position:absolute; left:0; top:0; width:100%; height:78px; background:rgba(0,0,0,0.5); z-index:2;}
+
+.logo{ float:left; width:11.22448979591837%; min-width:91px; padding:18px 0 0px;}
+.logo img{ width:100%;}
+.tatalogo{ float:right; width:4.489795918367347%; min-width:37px; padding:18px 0 0px;}
+
+
+.footerPanel{ background:#376189; padding:30px 0 50px;}
+.footerSecHolder{ border-top:1px solid #2a789f; border-bottom:1px solid #2a789f; clear:both; width:100%; float:left; margin-bottom:20px;}
+.footerSec{border-left:1px solid #2a789f; float:left; width:20%; margin-left:-1px; min-height:140px; padding:20px 2.5%; }
+
+.footerSec > ul{}
+.footerSec > ul > li{ margin-bottom:15px;}
+.footerSec > ul > li:last-child{ margin-bottom:0px;}
+.footerSec > ul > li a{ color:#FFF; font-size:13px;}
+.footerSec > ul > li span{ color:#FFF;}
+.footerSec > ul > li ul{ padding-top:5px;}
+.footerSec > ul > li ul li{margin-bottom:5px;}
+.footerSec > ul > li ul li a{ color:#48c4ec; font-size:13px;}
+
+
+.relatedsite { position: relative; margin:25px auto 0;  width: 247px;}
+.relatedsite div{ position: absolute; left: 0; bottom: 34px; width:148px; border: 1px solid #2d5173; background: #335b82; z-index:1; padding:15px 10px 10px; }
+.relatedsite div a{color:#48c4ec; font-size:13px; margin-bottom:5px; display:inline-block;}
+.relatedsite > a { width: 160px; height: 36px; background:url(../images/relatedsiteBg.png) no-repeat 0 0; color:#FFF; display:block; font-size:13px; padding-left:12px; line-height:35px; position:relative; z-index:2; color:#FFF; font-size:13px; }
+
+.visit{color:#FFF; font-size:13px;}
+.visit a{color:#FFF; font-size:13px;}
+
+.copyright{ float:left;color:#FFF; font-size:13px;}
+.footerLink{float:left;color:#FFF; font-size:13px;  display:inline-block; margin-left:20px;}
+.footerLink span{text-decoration:underline;}
+.aitl{ float:right;}
+
+@media screen and (max-width:1248px) {	
+.center{ width:95%; padding:0 2.5%; position:relative; }
+.center2{ width:100%; position:relative; }
+.center3{ width:97.5%; padding-right:2.5%; position:relative; }
+}
+
+@media screen and (max-width:1024px) {
+.center{ width:93%; position:relative; }	
+	
+}
+
+@media screen and (max-width:960px) {
+.footerSecHolder{ display:none;}
+}
+
+@media screen and (max-width:800px) {
+	
+}
+
+@media screen and (max-width: 480px) {
+
+.copyright{ float:none; display:block; padding-left:20px; margin-bottom:8px; text-align:center;}
+.footerPanel{ text-align:center;}
+.footerPanel u{ display:block; width:90%; text-align:center; margin-bottom:8px; text-decoration:none;}
+.footerLink{ float:none;}
+.mtl span{ min-height:100%;}
+.aitl{ float:none;}
+
+}
+
+@media screen and (max-width: 330px) {
+}

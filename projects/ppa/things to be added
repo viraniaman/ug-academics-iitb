@@ -1,0 +1,7 @@
+1. debugging output in email to be removed - done
+2. fix the course code space issue - done
+3. stars in places where fields are required, for prof section - done
+4. remove demo from name 
+5. date setting issue - prof can scroll through the date picker by clicking on the buttons on the side of the date. Actually the buttons are invisible, but they are there.
+6. ma207 pre requisites issue - can be done later i think
+7. changed length of 'Selected TAship of some other prof...' column

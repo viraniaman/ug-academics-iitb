@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+body{}
+/*Major Divisions*/
+#header{
+	background:#86B404;
+	height:10%;
+	width:100%;
+	}
+#container{
+	background:#C0C0C0;
+	width:100%;
+	min-height:100Px;}
+#footer{
+	background:#4B610B;
+	width:100%;
+	}
+
+#clear{ clear:both;}
+
+@media screen and (min-width:900px){
+
+
+/*Major Sub divisons*/
+#subheader{
+	width:100%;
+	margin:auto;}
+	
+#navigation{
+	background:#992828;
+	width:100%;
+	}
+#menu{
+padding:1%;
+margin:auto;}
+#mobilemenu{ display:none;}
+
+/*Major sub of Sub divisons*/
+.grid1{width:25%;	float:left; padding-left:1%;padding-top:1%;}
+.grid2{ width:71%;float:left; text-align:center;}
+
+#contain{ width:80%;  margin:auto;}
+#leftcontainer{ width:65%;
+float:left;}
+#rightcontainer{ width:30%;float:right;}
+
+.hd2{
+	background-color: #827839;
+	padding: 1%;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	color:#FFF;
+	border-bottom: #FFF thin solid;
+	text-transform: uppercase;
+	}
+.hddiv{
+	margin-top: 10px;
+	height: auto;
+	border:#06F thin solid;
+	
+}
+.nespadding{ padding:5%;
+}

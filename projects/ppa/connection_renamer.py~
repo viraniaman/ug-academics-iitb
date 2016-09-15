@@ -1,0 +1,5 @@
+import os
+
+os.rename('connection.php', 'connection2.php')
+os.rename('connection22.php', 'connection.php')
+os.rename('connection2.php', 'connection22.php)

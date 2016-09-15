@@ -1,0 +1,124 @@
+<?php
+session_start();
+if(isset($_SESSION['ldap_id']) and isset($_SESSION['user_type']))
+{
+    if($_SESSION['user_type']=='student')
+    {
+        header("location: student.php");
+    }
+    else
+    {
+        header("location: faculty.php");
+    }
+}
+else
+{
+    die('please login properly first');
+}
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+p{display: inline}
+</style>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+</head>
+<body>
+<br><br><br>
+			 <form method="POST" action="index.php">
+			 	<center><br><br><br><br>			 
+			 	<p>For Faculty</p>
+				<table style="font-size:16px;margin-left:20px;">
+				<tr><td>LDAP ID:</td> <td><input type='text' name='username1'></td></tr>
+				<tr><td>Password: </td> <td><input type='password' name='password1'></td></tr>
+				<tr><td><td><input type='submit'  name='login1' class='btn btn-success' value='Submit'></td></td></tr>
+				</table>
+			</form>
+			
+			<form method="POST" action="index.php">
+			 	<center><br><br><br><br>	
+			 	<p>For Students</p>		 
+				<table style="font-size:16px;margin-left:20px;">
+				<tr><td>LDAP ID:</td> <td><input type='text' name='username2'></td></tr>
+				<tr><td>Password: </td> <td><input type='password' name='password2'></td></tr>
+				<tr><td><td><input type='submit'  name='login2' class='btn btn-success' value='Submit'></td></td></tr>
+				</table>
+			</form>
+</body>
+</html>
+
+<?php
+session_start();
+function ldap_auth($ldap_id,$ldap_password){
+    $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
+    if($ldap_id=='') die("You have not entered any LDAP ID. Please go back and fill it up.");
+    $sr = ldap_search($ds,"dc=iitb,dc=ac,dc=in","(uid=$ldap_id)");
+    $info = ldap_get_entries($ds, $sr);
+    $ldap_id = $info[0]['dn'];
+    if(@ldap_bind($ds,$ldap_id,$ldap_password)){
+	    return true;
+    }
+    else{ return false;}
+}
+
+function endsWith($haystack, $needle) {
+    // search forward starting from end minus needle length characters
+    return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== false);
+}
+
+function is_faculty($ldap_id) {
+    $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
+    $sr = ldap_search($ds,"dc=iitb,dc=ac,dc=in","(uid=$ldap_id)");
+    $info = ldap_get_entries($ds, $sr);
+    $l_id = $info[0]['dn'];
+    $l_id_arr = explode(",",$l_id);
+    $user_is_faculty = endsWith($l_id_arr[1],"FAC");
+    return $user_is_faculty;
+}
+
+if (isset($_POST['login1'])){
+    $username = $_POST['username1'];
+    $password = $_POST['password1'];
+    if(ldap_auth($username,$password)){
+    
+        if(is_faculty($username)) {
+            $_SESSION['ldap_id']=$username;	
+            $_SESSION['user_type']='faculty';	
+            header("location: faculty.php");
+        }
+        else
+        {
+            die('Please enter your LDAP ID in the correct field');
+        }
+    }
+    else
+    {
+        echo 'ldap not authenticated :(';
+        header("location: index.php?failed=true");
+    }
+    
+}	
+else if(isset($_POST['login2'])) {
+    $username = $_POST['username2'];
+    $password = $_POST['password2'];
+    if(ldap_auth($username,$password)){
+    
+        if(!is_faculty($username)) {
+            $_SESSION['ldap_id']=$username;	
+            $_SESSION['user_type']='student';	
+            header("location: student.php");
+        }
+        else
+        {
+            die('Please enter your LDAP ID in the correct field');
+        }
+    }
+    else
+    {
+        echo 'ldap not authenticated :(';
+        header("location: index.php?failed=true");
+    }
+}
+?>
