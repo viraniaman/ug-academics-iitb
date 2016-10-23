@@ -3,21 +3,25 @@
     session_start();
     require_once('connection.php');
     
-    //require_once('department_assoc_array.php');
+ require_once('department_assoc_array.php');
 //    
-    $_SESSION['ldap_id'] = 'stu_ldap_1';
-    $_SESSION['user_type']='student';
-   /* 
+//    $_SESSION['ldap_id'] = 'stu_ldap_1';
+//    $_SESSION['user_type']='student';
+  
     if(!isset($_SESSION['ldap_id']))
     {
         die( 'Please login first');
     }
-    if($_SESSION['user_type']!='student')
+    if($_SESSION['user_type']!='student' )
     {
         header("location: index.php");
     }
+   
+    function remove_underscores($string)
+    {
+	return str_replace('_', ' ', $string);    
+    } 
     
-*/    
 ?>
 
 <!DOCTYPE html>
@@ -135,7 +139,7 @@
                 <td>".$row['eligibility_criteria']."</td>
                 <td>".$row['deadline']."</td>
                 <td><form action='apply.php' method='post'>
-                <input class='btn mini blue-stripe' type='submit' name='".$row['project_name']."' value='Go to projects page'></input>
+                <input class='btn mini blue-stripe' type='submit' name='".remove_underscores($row['project_name'])."' value='Go to projects page'></input>
                     <input type='hidden' name='deadline' value='".$row['deadline']."'/></form></td>
            </tr>";
         }

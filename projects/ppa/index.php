@@ -9,7 +9,7 @@ try
 require_once 'department_assoc_array.php';
 
 if (isset($_SESSION['ldap_id'])) {
-    if ($_SESSION['user_type'] == 'student') {
+    if ($_SESSION['user_type'] == 'student' && $_SESSION['ldap_id']!='sunnysoni' ) {
         header("location: student.php");
     } else {
         header("location: faculty.php");
@@ -30,7 +30,7 @@ if (isset($_SESSION['ldap_id'])) {
         th, td {
             padding: 15px;
             text-align: left;
-        }
+       }
         </style>
         <style>
             /* Sticky footer styles
@@ -75,6 +75,7 @@ if (isset($_SESSION['ldap_id'])) {
             }
             
             ?>
+            
             
         <form method="POST" action="index.php">		
             <center>
@@ -177,7 +178,7 @@ if (isset($_POST['login1'])) {
 
             //Add entry to student details database if doesnt already exist
 
-            $check_query = "SELECT ldap_id FROM student_details WHERE ldap_id='" . $username . "'";
+            $check_query = "SELECT ldap_id FROM student_project_details WHERE ldap_id='" . $username . "'";
             $result = mysqli_query($conn, $check_query);
             if (mysqli_num_rows($result) == 0) {
                 //Getting Name and department from ldap database
@@ -198,7 +199,7 @@ if (isset($_POST['login1'])) {
                     }
                 }
 
-                $insert_query = "INSERT INTO student_details (ldap_id, name, department) VALUES ('" . $username . "', '" . $name . "', '" . $department . "')";
+                $insert_query = "INSERT INTO student_project_details (ldap_id, name, department) VALUES ('" . $username . "', '" . $name . "', '" . $department . "')";
                 if (mysqli_query($conn, $insert_query)) {
                     $next_page = "location: my_info.php";
                 } else {
@@ -217,3 +218,4 @@ if (isset($_POST['login1'])) {
     mysqli_close($conn);
 }
 ?>
+

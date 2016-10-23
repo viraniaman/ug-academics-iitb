@@ -70,7 +70,8 @@ $department_to_very_short=array(
     "MATH" => "Mathematics",
     "ME" => "Mechanical Engineering",
     "MET" => "Metallurgical Engineering and Materials Science",
-    "PHY" => "Engineering Physics"
+    "PHY" => "Engineering Physics",
+    "SOM" => "SJM SOM",
 );
 
 ?>

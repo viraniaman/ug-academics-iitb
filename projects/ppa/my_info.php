@@ -53,7 +53,7 @@ if($_SESSION['user_type']!='student')
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Project Allocatation Portal</a>
+                    <a class="navbar-brand" href="#">Project Allocation Portal</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="student.php">All Projects</a></li>
@@ -68,7 +68,7 @@ if($_SESSION['user_type']!='student')
             <h3>All your information is here. Edit as desired</h3>
             <form action="my_info.php" method="post">
                 <?php
-                
+                 
                 $query = "SELECT * FROM student_project_details WHERE ldap_id='".$_SESSION['ldap_id']."'";
                 $result = mysqli_query($conn, $query);
                 if(mysqli_num_rows($result)==0)

@@ -2,18 +2,20 @@
 //FACULTY PAGE
 session_start();
 require_once 'connection.php';
-//
-//$_SESSION['ldap_id'] = 'sample_ldap';
-//$_SESSION['user_type']='faculty';
 
-//if(!isset($_SESSION['ldap_id']))
-//{
-//    die("Please login first!");
-//}
+//$_SESSION['ldap_id'] = 'ldap_1';
+
+//$_SESSION['user_type']='faculty';
+//$_SESSION['department']='dept1';
+
+if(!isset($_SESSION['ldap_id']))
+{
+  die("Please login first!");
+}
 
 //if($_SESSION['user_type']!='faculty')
 //{
- //   header("location: index.php");
+//header("location: index.php");
 //}
 
 $prof_details = NULL;
@@ -279,7 +281,7 @@ if(isset($_POST['update_student_project_applications']))
                     console.log(num_waitlisted);
                     if(num_waitlisted !== nos.length)
                     {
-                        alert("You have not filled the waitlist correctly1! Please go back and try again");
+                        alert("You have not filled the waitlist correctly! Please go back and try again");
                         return false;
                     }
                     
@@ -304,7 +306,7 @@ if(isset($_POST['update_student_project_applications']))
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">TA Selection Portal</a>
+                    <a class="navbar-brand" href="#">Project Allocation Portal</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="faculty.php">View & Edit Student Applications</a></li>

@@ -112,8 +112,8 @@ $bf = new BaseFunctions;
             <div class="row">
                 <p class="text-muted">Currently, many students approach Professors for a project as regular schedule provides ample amount of time to delve into the wonderful world of research. But sometimes, it becomes difficult for the students to identify the right professor doing the right research or working on a project which can intrigue the student. There lies a gap of communication between the professors and the enthusiastic students.</p>
                 <p class="text-muted">The Portal for Project Allocation (PPA) has been undertaken to bridge this gap and to centralise the process of project allocation for the convenience of both professors and the students. It also aims at encouraging students to take research experience beyond their own department by launching Inter-Department Projects. As the name says, EnPoWER wishes to build a culture of UG participation in innovative Engineering and Research activities.
-It shall be conducted in the joint purview of Academic Council and Placement Cell so students are required to sign IAF before taking up the project. Please go through the Rule Book here very carefully before applying. In case of any queries, feel free to contact us.
-                <p class="text-muted">A very special thanks to all the faculty members &amp; DAMP Teams for their kind support towards this. We hope you, the students, make the most of it!</p>
+It shall be conducted in the joint purview of Academic Council and Placement Cell so students are required to sign IAF before taking up the project. Please go through the Rule Book <a href="https://docs.google.com/document/d/1vHVJMD423N3l-pPOhgDSB_2K3Z2QUmJ7RW-3wMVjX2A/edit">here </a>very carefully before applying. In case of any queries, feel free to contact us.
+                
             </div>
             
             
@@ -132,7 +132,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
             <div class="row" style="text-align:center;">
                 <!--<h2 class="section-heading">Coming Soon!</h2>-->
                 <div class="col-md-2 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="ppa/index.php" class="portfolio-link" >
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -159,6 +159,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
+
             <div class="row text-center">
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -174,7 +175,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                         <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">What is the duration of project?</h4>
-                    <p class="text-muted">The duration of SURP is a mutual decision between the Professor and you. You can put forth your convenient dates during the interview and the Professor can comment on his/her availability. Ideally it is one and a half to two months. It can also be exceeded into the semester in case the student is enthusiastic enough and wants to work for a URA award.</p>
+                    <p class="text-muted">The duration of project is a mutual decision between the Professor and you. You can put forth your convenient dates during the interview and the Professor can comment on his/her availability. Ideally it is one and a half to two months. It can also be exceeded into the semester in case the student is enthusiastic enough and wants to work for a URA award.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -185,7 +186,9 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                     <p class="text-muted">Statement of Purpose should reflect the motivations with which you are filling the application for the project you want to do. It is used by the Professor to judge if you are enthusiastic enough to learn and work for the entire duration of the project.</p>
                 </div>
             </div><div style="text-align: center;">
-            <a href="faq.php" target="_blank" class="page-scroll btn btn-xl">More Questions?</a></div>
+            <!--
+			<a href="faq.php" target="_blank" class="page-scroll btn btn-xl">More Questions?</a>
+--></div>
         </div>
     </section>
 
@@ -203,7 +206,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
             <div class="row" >
                <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="" height="30px" width="70px" >
                         <h4>Nihar Verma</h4>
                         <p class="text-muted">Coordinator</p>
                         <ul class="list-inline social-buttons">
@@ -214,7 +217,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                         </ul>
                     </div>
                     <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="" height="200px" width="200px">
                         <h4>Sakshay Bhatia</h4>
                         <p class="text-muted">Coordinator</p>
                         <ul class="list-inline social-buttons">
@@ -223,14 +226,14 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                             </li>
                             
                         </ul>
-                    </div>-->
+                    </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/4.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/team/4.jpg" class="img-responsive img-circle" alt="" width="200px" height="200px">
                         <h4>Sunny Soni</h4>
                         <p class="text-muted">Institute Secretary Academic Affairs
-                        <br><a href="mailto:isaa.enpower@gmail.com">isaa.enpower@gmail.com</a></p>
+                        <br><a href="mailto:enpower.iitb@gmail.com">enpower.iitb@gmail.com</a></p>
                         <ul class="list-inline social-buttons">
                             <!--<li><a target="_blank" href="https://twitter.com/Chirag_Gandhi7"><i class="fa fa-twitter"></i></a>
                             </li>-->
@@ -242,7 +245,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="" width="150px" height="150px">
                         <h4>Manas Aggarwal</h4>
                         <p class="text-muted">Coordinator</p>
                         <ul class="list-inline social-buttons">
@@ -253,7 +256,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                         </ul>
                     </div>
                     <div class="team-member">
-                        <img src="img/team/5.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/team/5.jpg" class="img-responsive img-circle" alt="" style="border-radius:50%" height="150px" width="150px">
                         <h4>Sahil Bhargava </h4>
                         <p class="text-muted">Coordinator</p>
                         <ul class="list-inline social-buttons">
@@ -262,7 +265,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                             </li>
                             
                         </ul>
-                    </div>-->
+                    </div>
                 </div>
             </div>
                 </div>
@@ -339,7 +342,7 @@ It shall be conducted in the joint purview of Academic Council and Placement Cel
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h2>Academic Projects</h2>
-                            <? /*php $bf->echoProjectTable('AERO'); */?>
+                            
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>

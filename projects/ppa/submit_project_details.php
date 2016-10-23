@@ -2,21 +2,29 @@
 //FACULTY PAGE
 session_start();
 require_once 'connection.php';
-/*
+
 if(!isset($_SESSION['ldap_id']))
 {
-    die("Please login first!");
+  die("Please login first!");
 }
 
 if($_SESSION['user_type']!='faculty')
 {
-    header("location: index.php");
+header("location: index.php");
 }
-*/
-$_SESSION['ldap_id'] = 'sample_ldap';
+
+function remove_underscores($string)
+{
+    return str_replace('_', ' ', $string);
+}
+
+//$_SESSION['ldap_id'] = 'sample_ldap';
+
+var_dump($_POST);
 
 $project_info = array();
-$project_name = $string = preg_replace('/\s+/', '', $_POST['project_name']);
+//$project_name = $string = preg_replace('/\s+/', '', $_POST['project_name']);
+$project_name = $_POST['project_name'];
 
 $deadline = $_POST['deadline'];
 $eligibility_criteria = $_POST['eligibility_criteria'];
@@ -35,26 +43,26 @@ function get_reformatted_date($date)
     $date_array2 = explode("-", $date);
     if(count($date_array2) == 3)
     {
-        return $date_array2;
+        return $date;
     }
     return $date_array1[2]."-".$date_array1[0]."-".$date_array1[1];
 }
 
-/*function course_exists()
+function course_exists()
 {
-    global $course_code, $conn;
-    $query = "SELECT * FROM project_info WHERE course_code='".$course_code."'";
-    echo "course code is: ".$course_code . "<br>";
+    global $project_name, $conn;
+    $query = "SELECT * FROM project_info WHERE project_name='".$project_name."'";
+    //echo "course code is: ".$course_code . "<br>";
     $result = mysqli_query($conn, $query);
     if(mysqli_num_rows($result)>0)
     {
-        echo "course exists!<br>";
+        echo "project exists!<br>";
         return true;
     }
-    echo "course doesnt exist!<br>";
+    echo "project doesnt exist!<br>";
     return false;
 }
-*/
+
 function get_sop_questions()
 {
     $string = "";
@@ -83,6 +91,7 @@ $deadline = get_reformatted_date($deadline);
 $interview_start_date = get_reformatted_date($interview_start_date);
 $interview_end_date = get_reformatted_date($interview_end_date);
 $sop_questions = get_sop_questions();
+$project_name = remove_underscores($project_name);
 
 
 

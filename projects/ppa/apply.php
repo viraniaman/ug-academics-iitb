@@ -2,8 +2,10 @@
 
     session_start();
     require_once('connection.php');
-    
-    //require_once('department_assoc_array.php');
+// var_dump($_POST);
+//   var_dump($_SESSION);
+ 
+require_once('department_assoc_array.php');
     
     if(!isset($_SESSION['ldap_id']))
     {
@@ -14,6 +16,11 @@
     {
         header("location: index.php");
     }
+
+function remove_underscores($string)
+{
+return str_replace('_', ' ', $string);
+}
     
 ?>
 
@@ -28,8 +35,9 @@
 
     foreach($_POST as $key => $value)
     {
-        if($value == "Go to project page")
+        if($value == "Go to projects page")
         {
+	    $key = remove_underscores($key);
             $query = "SELECT * FROM project_info WHERE project_name='".$key."'";
             $result = mysqli_query($conn, $query);
             if(mysqli_num_rows($result)>0)
@@ -40,7 +48,7 @@
                 }
             }
             else
-            {
+            {	
                 die("Some error occured while fetching project info. Please contact at 8879049043/9821212128");
             }
         }
@@ -137,7 +145,7 @@
         {
             if (!document.getElementById("sop_a_"+i).value) 
             {
-                window.alert("Please enter SOP answers");
+                window.alert("Please enter SOP answers. While removing the application, mention 'removing application' in given fields.");
                 return false;
             }
         }
@@ -311,15 +319,16 @@
     {
         $interview_pending_state = true;
     }
-    
-    echo "<form action='apply_for_project.php' method='post' style='float:right;' id='submit_form' onsubmit='return check_empty_form()'>";
+//     echo "<form action='apply_for_project.php' method='post' style='float:right;' id='submit_form' '>";
+
+  echo "<form action='apply_for_project.php' method='post' style='float:right;' id='submit_form' onsubmit='return check_empty_form()'>";
     echo "<p style='color:red'> <a onclick='window.open(\"disclaimer.php\")'>Please read the disclaimer first here!</a> </p>";
     if($accept_state)
     {
         if($student_project_application_info['student_answer']!='Accepted')
         {
-            echo "<input type='submit' value='Accept project' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and conform to the requirements\")'/><br>";
-            echo "<input type='submit' value='Reject project' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and conform to the requirements\")' /><br>";
+            echo "<input type='submit' value='Accept project' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and confirm to the requirements\")'/><br>";
+            echo "<input type='submit' value='Reject project' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and confirm to the requirements\")' /><br>";
         }
         else
         {
@@ -329,7 +338,7 @@
     }
     if($apply_state)
     {
-        echo "<input type='submit' value='Apply for project' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and conform to the requirements\")'/><br><br>";
+        echo "<input type='submit' value='Apply for project' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and confirm to the requirements\")'/><br><br>";
     }
     if($waitlist_state)
     {
@@ -345,7 +354,7 @@
     {
         if(strtotime(date('Y-m-d')) <= strtotime($_POST['deadline']))
         {
-            echo "<input type='submit' value='Remove Application' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and conform to the requirements\")'/><br><br>";
+            echo "<input type='submit' value='Remove Application' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and confirm to the requirements\")'/><br><br>";
         }
         else
         {

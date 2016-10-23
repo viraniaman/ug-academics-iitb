@@ -26,5 +26,5 @@ function print_ldap_info($ldap_id) {
 //    return $user_is_faculty;
 }
 
-print_ldap_info('aayu.yadav');
+print_ldap_info('tripathi.anay');
 

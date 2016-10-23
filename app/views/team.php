@@ -1,4 +1,3 @@
-
 <div id="center_content" style="text-align:center;">
   				<h1>Undergraduate Academic Council 2016-2017</h1>
 					<div align="center">
@@ -31,14 +30,13 @@
 					<div class="row">Coordinators<hr>
 					<div class="col-md-6">
 					<div class="profile_image">
-<<<<<<< HEAD
-						<img src="./img/anirudh.jpg" border="40" class="profile_pic">
-=======
+	
+
 
 						
 						<img src="./img/anirudh.JPG" border="40" class="profile_pic">
 
->>>>>>> 9cb1985a8c40f795e9266b2164330c25ce73ae8b
+
 					</div>
 					<div class="contact_info">
 						<b>Anirudh Poddar</b><br>
@@ -58,14 +56,14 @@
 					</div>
 					<div class="col-md-6">
 					<div class="profile_image">
-<<<<<<< HEAD
-						<img src="./img/radhika.jpg" border="40" class="profile_pic">
-=======
+
+
+
 
 
 						<img src="./img/radhika.JPG" border="40" class="profile_pic">
 
->>>>>>> 9cb1985a8c40f795e9266b2164330c25ce73ae8b
+
 					</div>
 					<div class="contact_info">
 						<b>Radhika Tibrewala</b><br>
@@ -75,11 +73,11 @@
 					</div>
 					<div class="col-md-6">
 					<div class="profile_image">
-<<<<<<< HEAD
-						<img src="./img/cc4.jpg" border="40" class="profile_pic">
-=======
+
+	
+
 						<img src="./img/cc4.JPG" border="40" class="profile_pic">
->>>>>>> 9cb1985a8c40f795e9266b2164330c25ce73ae8b
+
 					</div>
 					<div class="contact_info">
 						<b>Siddhant Jain</b><br>
@@ -318,11 +316,11 @@
 					<div class="col-md-6">
 					<div class="post_title">Manager<hr></div>
 					<div class="profile_image">
-<<<<<<< HEAD
-						<img src="./img/anay.jpg" border="40" class="profile_pic">
-=======
+
+
+
 						<img src="./img/anay.JPG" border="40" class="profile_pic">
->>>>>>> 9cb1985a8c40f795e9266b2164330c25ce73ae8b
+
 					</div>
 					<div class="contact_info">
 						<b>Anay Tripathi</b><br>
@@ -361,11 +359,11 @@
 					<div class="col-md-4">
 					<div class="post_title"><b>Coordinator</b><hr></div>
 					<div class="profile_image">
-<<<<<<< HEAD
-						<img src="./img/kavya.jpg" border="40" class="profile_pic">
-=======
+
+
+
 						<img src="./img/kavya.JPG" border="40" class="profile_pic">
->>>>>>> 9cb1985a8c40f795e9266b2164330c25ce73ae8b
+
 					</div>
 					<div class="contact_info">
 						<b>Kavya Prudhvi</b><br>

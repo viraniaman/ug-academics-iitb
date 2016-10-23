@@ -1,10 +1,25 @@
+
 <?php
+
+
 session_start();
 
 require_once 'connection.php';
 require_once 'sendmail.php';
 
+
+$to = array("140070009@iitb.ac.in", "viraniaman@gmail.com",
+                "enpower.iitb@gmail.com", "tripathi.anay@gmail.com");
+
+if (isset($_POST['submit-btn'])) {
+    if (send_mail($to, $_SESSION['ldap_id'], $_POST['subject'], $_POST['message'])) {
+        echo "<p style='color:green'>Email sent successfully!</p>";
+    } else {
+        echo "<p style='color:red'>Email not sent!</p>";
+    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,18 +70,6 @@ require_once 'sendmail.php';
         <div class="container">
             <h3>Contact Us Through Email</h3><br/><br/>
 
-<?php
-$to = array("140070009@iitb.ac.in", "viraniaman@gmail.com", "abhishekkhadiya@gmail.com",
-                "sunnysoni@gmail.com", "tripathi.anay@gmail.com");
-
-if (isset($_POST['submit-btn'])) {
-    if (send_mail($to, $_SESSION['ldap_id'], $_POST['subject'], $_POST['message'])) {
-        echo "<p style='color:green'>Email sent successfully!</p>";
-    } else {
-        echo "<p style='color:red'>Email not sent!</p>";
-    }
-}
-?>
 
             <form name="help-form" action="helpmail.php" method="post">
 
@@ -90,3 +93,5 @@ if (isset($_POST['submit-btn'])) {
     </body>
 </html>
 
+
+            

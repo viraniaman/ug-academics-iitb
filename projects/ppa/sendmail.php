@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 require_once 'swift/lib/swift_required.php';
 
@@ -7,11 +7,10 @@ if(!isset($_SESSION['ldap_id']))
     die("Please login first!");
 }
 
-if($_SESSION['user_type']!='faculty')
-{
-    header("location: index.php");
-}
-
+//if($_SESSION['user_type']!='faculty')
+//{
+//    header("location: index.php");
+//}
 function send_mail($to, $from, $subject, $message)
 {
     $from = $_SESSION['ldap_id'] . '@iitb.ac.in';
@@ -32,3 +31,4 @@ function send_mail($to, $from, $subject, $message)
 }
 
 ?>
+

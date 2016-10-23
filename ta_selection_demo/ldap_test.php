@@ -24,5 +24,5 @@ function print_ldap_info($ldap_id) {
 //    return $user_is_faculty;
 }
 
-print_ldap_info('164076004');
+print_ldap_info('kalro.arti');
 

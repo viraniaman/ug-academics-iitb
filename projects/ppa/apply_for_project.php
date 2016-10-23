@@ -16,7 +16,7 @@ if($_SESSION['user_type']!='student')
 //print_r($_POST);
 
 $ldap_id = $_SESSION['ldap_id'];
-$project_name = $_POST['project_name'];
+$project_name = $_POST['project_code'];
 
 $sop_answers = get_sop_answers();
 $status_of_application = get_status();
@@ -93,15 +93,15 @@ if($_POST['button']=='Apply for project')
 {
     if(get_num_of_current_courses($ldap_id)<3 && not_yet_applied_for($project_name))
     {
-        $query = "INSERT INTO student_project_applications (ldap_id, project_name, status_of_application, sop_answers, student_answer, ) "
-                . "values ('$ldap_id','$project_name', 'Interview Pending', '".mysqli_real_escape_string($conn, $sop_answers)."', '', )";
+        $query = "INSERT INTO student_project_applications (ldap_id, project_name, status_of_application, sop_answers, student_answer ) "
+                . "values ('$ldap_id','$project_name', 'Interview Pending', '".mysqli_real_escape_string($conn, $sop_answers)."', '' )";
         if(!mysqli_query($conn, $query))
         {
             die(mysqli_error($conn));
         }
         else 
         {
-            echo "You have successfully applied for $project name";
+            echo ( "You have successfully applied for $project_name");
             header("location: my_applications.php");
         }
     }
@@ -122,7 +122,7 @@ if($_POST['button']=='Accept project')
                 . " WHERE ldap_id='$ldap_id' AND project_name='$project_name'";
         if(mysqli_query($conn, $accept_query))
         {
-            echo "Successfully accepted project for $cproject_name! Congratulations! ";
+            echo "Successfully accepted project for $project_name ! Congratulations! ";
             echo "<a href='my_applications.php'>Go to my applications</a>";
         }
         else
