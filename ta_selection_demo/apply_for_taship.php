@@ -114,21 +114,28 @@ if($_POST['button']=='Apply for TAship')
 if($_POST['button']=='Accept TAship')
 {
     
-    $query = "DELETE FROM student_applications WHERE ldap_id='$ldap_id' AND NOT course_code='$course_code'";
+    $query = "UPDATE student_applications SET student_answer='Selected TAship of some other professor' WHERE ldap_id='$ldap_id' AND NOT course_code='$course_code'";
+
+    //$query = "UPDATE student_applications SET selected='True' WHERE ldap_id='$ldap_id'";
     
     if(mysqli_query($conn, $query))
     {
         $accept_query = "UPDATE student_applications SET student_answer='Accepted'"
                 . " WHERE ldap_id='$ldap_id' AND course_code='$course_code'";
+        $accept_query2 = "UPDATE student_details SET selected='True' WHERE ldap_id='$ldap_id'";
         if(mysqli_query($conn, $accept_query))
         {
-            echo "Successfully accepted TAship for $course_code! Congratulations! ";
-            echo "<a href='my_applications.php'>Go to my applications</a>";
+            if(mysqli_query($conn, $accept_query2))
+            {
+                echo "Successfully accepted TAship for $course_code! Congratulations! ";
+                echo "<a href='my_applications.php'>Go to my applications</a>";
+            }
+            else
+            {
+                echo "There was some error in accepting TAship. Please contact Aman Virani at 9821212128";
+            }
         }
-        else
-        {
-            echo "There was some error in accepting TAship. Please contact Aman Virani at 9821212128";
-        }
+        
     }
     else
     {

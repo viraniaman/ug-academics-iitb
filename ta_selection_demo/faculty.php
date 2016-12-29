@@ -2,9 +2,9 @@
 //FACULTY PAGE
 session_start();
 require_once 'connection.php';
-//
-//$_SESSION['ldap_id'] = 'sample_ldap';
-//$_SESSION['user_type']='faculty';
+
+// $_SESSION['ldap_id'] = 'sample_ldap';
+// $_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
 {
@@ -143,6 +143,66 @@ if(isset($_POST['update_student_applications']))
 //                }
                 
             }
+
+            //get current status
+
+            $student_info = NULL;
+
+            $student_query = "SELECT * FROM student_details WHERE ldap_id='".$student_ldap."'";
+            $result_student = mysqli_query($conn, $student_query);
+            if(mysqli_num_rows($result_student)>0)
+            {
+                while($row = mysqli_fetch_assoc($result_student))
+                {
+                    $student_info = $row;
+                }
+            }
+            else
+            {
+                die("Some error occured while fetching student info. Please contact Aman Virani at 9821212128");
+            }
+
+            $student_application_info = NULL;
+    
+            $student_application_query = "SELECT * FROM student_applications WHERE course_code='".$_SESSION['course_code']."' AND ldap_id='".$student_info['ldap_id']."'";
+            $result_student_application_query = mysqli_query($conn, $student_application_query);
+            if(mysqli_num_rows($result_student_application_query)>0)
+            {
+                while($row = mysqli_fetch_assoc($result_student_application_query))
+                {
+                    $student_application_info = $row;
+                }
+            }
+            else if(mysqli_num_rows($result_student_application_query) == 0)
+            {
+                $student_application_info['course_code'] = $_SESSION['course_code'];
+                $student_application_info['ldap_id'] = $student_info['ldap_id'];
+                $student_application_info['status_of_application'] = "Not applied";
+            }
+            else 
+            {
+                die("Some error occured while fetching student application info. Please contact Aman Virani at 9821212128");
+            }
+
+            $status = $student_application_info['status_of_application'];
+
+            if($status == 'Selected' && $value == "Rejected")
+            {
+                $query2 = "UPDATE student_details SET selected='' WHERE ldap_id='$student_ldap'";
+                $query3 = "UPDATE student_applications SET student_answer='' WHERE ldap_id='".$student_ldap."'";
+                if(mysqli_query($conn, $query2))
+                {
+                    if(!mysqli_query($conn, $query3))
+                    {
+                        die("Some error occured. Contact Aman Virani at 9821212128");
+                    }
+                }
+                else
+                {
+                    die("Some error occured. Contact Aman Virani at 9821212128");
+                }
+            }
+
             
             $query = "UPDATE student_applications SET status_of_application='".$value."',"
                     . " waitlist_no='".$_POST['waitlist_no_'.$student_ldap]."'"

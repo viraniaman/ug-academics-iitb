@@ -331,6 +331,11 @@
     {
         $interview_pending_state = true;
     }
+
+    if($student_info['selected']=='True')
+    {
+        $accept_state = $waitlist_state = $apply_state = $rejected_state = $interview_pending_state = false;
+    }
     
     echo "<form action='apply_for_taship.php' method='post' style='float:right;' id='submit_form' onsubmit='return check_empty_form()'>";
     echo "<p style='color:red'> <a onclick='window.open(\"disclaimer.php\")'>Please read the disclaimer first here!</a> </p>";

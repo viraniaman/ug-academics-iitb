@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) > 1) {
     while ($row = mysqli_fetch_assoc($result)) {
 
         if ($row['student_answer'] == 'Accepted') {
-            $query2 = "DELETE FROM student_applications WHERE ldap_id='$ldap_id' AND NOT course_code='" . $row['course_code'] . "'";
+            $query2 = "UPDATE student_applications SET student_answer='Selected TAship of some other professor' WHERE ldap_id='$ldap_id' AND NOT course_code='" . $row['course_code'] . "'";
             if (!mysqli_query($conn, $query2)) {
                 echo "Some problem with deleting the rest of the entries after getting selected in one. "
                 . "Contact Aman Virani at 9821212128.";
@@ -144,8 +144,7 @@ if (mysqli_num_rows($result) > 1) {
                     </tr>
                 </thead>
                 <?php
-                $sql = "SELECT * FROM student_applications WHERE ldap_id='" . $ldap_id ."' "
-                        . "AND NOT student_answer='Selected TAship of some other professor'";
+                $sql = "SELECT * FROM student_applications WHERE ldap_id='" . $ldap_id ."'";
 
                 $result = mysqli_query($conn, $sql);
 
