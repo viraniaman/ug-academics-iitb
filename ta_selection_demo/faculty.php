@@ -3,8 +3,8 @@
 session_start();
 require_once 'connection.php';
 
-// $_SESSION['ldap_id'] = '140070009';
-// $_SESSION['user_type']='faculty';
+$_SESSION['ldap_id'] = '140070009';
+$_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
 {
@@ -197,7 +197,7 @@ if(isset($_POST['update_student_applications']))
 
             $status = $student_application_info['status_of_application'];
 
-            if($status == 'Selected' && $value == "Rejected")
+            if($status == 'Selected' && $value != "Selected")
             {
                 $query2 = "UPDATE student_details SET selected='' WHERE ldap_id='$student_ldap'";
                 $query3 = "UPDATE student_applications SET student_answer='' WHERE ldap_id='".$student_ldap."'";
@@ -218,11 +218,20 @@ if(isset($_POST['update_student_applications']))
                 }
             }
 
+
+
             if($value == "Selected")
             {
                 //set countdown
 
-                $query = "UPDATE student_applications SET student_answer='' WHERE ldap_id='".$student_ldap."'";
+                $date = date('Y-m-d H:i:s');
+
+                $query = "UPDATE student_applications SET accept_datetime='$date' WHERE ldap_id='".$student_ldap."' AND course_code='".$_SESSION['course_code']."'";
+
+                if(!mysqli_query($conn, $query))
+                {
+                    die("Some error occured while setting application accept datetime. Contact Aman Virani at 9821212128");
+                }
 
             }
 

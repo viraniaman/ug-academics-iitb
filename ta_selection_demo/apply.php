@@ -332,7 +332,7 @@
         $interview_pending_state = true;
     }
 
-    if($student_info['selected']=='True')
+    if($student_info['selected']!="" or $student_info['selected']!=NULL)
     {
         $accept_state = $waitlist_state = $apply_state = $rejected_state = $interview_pending_state = false;
     }
