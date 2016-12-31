@@ -22,7 +22,7 @@ function send_mail1($to, $from, $subject, $message, $ldap_id1, $passwd1)
     return $mailer->send($message);
 }
 
-$cutoff_time = 0.02;
+$cutoff_time = 18;
 
 while(true)
 {
