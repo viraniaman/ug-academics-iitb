@@ -22,7 +22,7 @@ function send_mail1($to, $from, $subject, $message, $ldap_id1, $passwd1)
     return $mailer->send($message);
 }
 
-$cutoff_time = 24;
+$cutoff_time = 0.02;
 
 while(true)
 {
@@ -41,6 +41,8 @@ while(true)
 	    	$seconds = strtotime($date_now) - strtotime($date);
 
 	    	$hours = $seconds/3600;
+
+			var_dump($hours);
 
 	    	if($hours>=$cutoff_time)
 	    	{
@@ -94,7 +96,7 @@ while(true)
 
 	    }
 	}
-	sleep(3600);
+	sleep(1);
 }
 
 

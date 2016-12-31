@@ -1,10 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
+$servername = "10.105.177.5";
+$username = "ugacademics";
+$password = "ug_acads";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, "trial");
+$conn = mysqli_connect($servername, $username, $password, "ugacademics");
 
 // Check connection
 if (!$conn) {

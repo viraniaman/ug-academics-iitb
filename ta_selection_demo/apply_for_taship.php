@@ -21,8 +21,6 @@ $course_code = $_POST['course_code'];
 $sop_answers = get_sop_answers();
 $status_of_application = get_status();
 
-
-
 ?>
 <?php
 //<editor-fold desc="functions">
@@ -144,11 +142,15 @@ if($_POST['button']=='Accept TAship')
 
     //removing the countdown
 
-    $query = "UPDATE student_applications SET accept_datetime='' WHERE ldap_id='$ldap_id' AND course_code='$course_code'";
+    $query = "UPDATE student_applications SET accept_datetime=NULL WHERE ldap_id='$ldap_id' AND course_code='$course_code'";
 
     if(!mysqli_query($conn, $query))
     {
         die("Some error occured. Please contact Aman Virani at 9821212128");
+    }
+    else
+    {
+        echo "Successfully unset the clock";
     }
 
     
@@ -183,6 +185,19 @@ if($_POST['button'] == 'Reject TAship')
     {
         echo "Successfully rejected TAship for $course_code";
         header("location: my_applications.php");
+    }
+
+    //removing countdown
+
+    $query = "UPDATE student_applications SET accept_datetime=NULL WHERE ldap_id='$ldap_id' AND course_code='$course_code'";
+
+    if(!mysqli_query($conn, $query))
+    {
+        die("Some error occured. Please contact Aman Virani at 9821212128");
+    }
+    else
+    {
+        echo "Successfully unset the clock";
     }
     
     // Shifting waitlist here
