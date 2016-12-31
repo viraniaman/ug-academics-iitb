@@ -83,7 +83,7 @@ if(isset($_SESSION['sendto']))
 
 <?php
 
-$to = $array;
+$to = array_values($array);
 
 if (isset($_POST['submit-btn'])) {
     if (send_mail($to, $_SESSION['ldap_id'], $_POST['subject'], $_POST['message'])) {
