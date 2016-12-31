@@ -549,7 +549,7 @@ if(isset($_POST['update_student_applications']))
 //                        }
                         
 //                        print_r($row);
-                        echo "<br>";
+                        //echo "<br>";
                         
                         echo "<td><textarea name='message_to_student_".$row['ldap_id']."' cols='10'>".$row['message_to_student']."</textarea></td>";
                         

@@ -69,7 +69,10 @@ if(isset($_SESSION['sendto']))
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Home</a></li>
                     </ul>
-                    <a href="logout.php" class="navbar-brand pull-right">Logout</a>
+                    <ul class='nav navbar-nav navbar-right pull-right' >
+                        <li><a href="logout.php">Logout</a></li>
+                    </ul>
+                    
                 </div>
 
             </div>
