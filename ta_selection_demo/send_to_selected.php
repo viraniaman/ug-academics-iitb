@@ -4,9 +4,9 @@ session_start();
 require_once 'connection.php';
 require_once 'sendmail.php';
 
-//$_SESSION['ldap_id'] = '140070009';
-//$_SESSION['passwd'] = '04041996@iit^';
-//$_SESSION['user_type']='faculty';
+$_SESSION['ldap_id'] = '140070009';
+$_SESSION['passwd'] = '04041996@iit^';
+$_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
 {
