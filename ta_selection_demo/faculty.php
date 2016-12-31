@@ -3,8 +3,8 @@
 session_start();
 require_once 'connection.php';
 
-$_SESSION['ldap_id'] = 'sample_ldap';
-$_SESSION['user_type']='faculty';
+//$_SESSION['ldap_id'] = 'sample_ldap';
+//$_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
 {
