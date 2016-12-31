@@ -141,6 +141,16 @@ if($_POST['button']=='Accept TAship')
     {
         echo "There was some error in processing your acceptance of TAship. Please contact Aman Virani - 9821212128";
     }
+
+    //removing the countdown
+
+    $query = "UPDATE student_applications SET accept_datetime='' WHERE ldap_id='$ldap_id' AND course_code='$course_code'";
+
+    if(!mysqli_query($conn, $query))
+    {
+        die("Some error occured. Please contact Aman Virani at 9821212128");
+    }
+
     
 //    if(get_num_of_current_courses($ldap_id)<3)
 //    {
