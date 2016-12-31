@@ -4,9 +4,9 @@ session_start();
 require_once 'connection.php';
 require_once 'sendmail.php';
 
-$_SESSION['ldap_id'] = '140070009';
-$_SESSION['passwd'] = '04041996@iit^';
-$_SESSION['user_type']='faculty';
+// $_SESSION['ldap_id'] = '140070009';
+// $_SESSION['passwd'] = '04041996@iit^';
+// $_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
 {
@@ -78,7 +78,7 @@ $to = array_values($_SESSION['sendto']);
 
 if (isset($_POST['submit-btn'])) {
     if (send_mail($to, $_SESSION['ldap_id'], $_POST['subject'], $_POST['message'])) {
-        echo "<p style='color:green'>Email sent successfully!</p>";
+        echo "<p style='color:green'>Email sent successfully! Click on 'home' above to go back</p>";
         unset($_SESSION['sendto']);
     } else {
         echo "<p style='color:red'>Email not sent!</p>";
