@@ -18,17 +18,6 @@ if($_SESSION['user_type']!='faculty')
     header("location: index.php");
 }
 
-$array = NULL;
-
-if(isset($_SESSION['sendto']))
-{
-	$GLOBALS['array'] = $_SESSION['sendto'];
-	unset($_SESSION['sendto']);
-	
-}
-
-var_dump($array);
-
 ?>
 
 <!DOCTYPE html>
@@ -85,13 +74,12 @@ var_dump($array);
 
 <?php
 
-$to = array_values($array);
-
-var_dump($to);
+$to = array_values($_SESSION['sendto']);
 
 if (isset($_POST['submit-btn'])) {
     if (send_mail($to, $_SESSION['ldap_id'], $_POST['subject'], $_POST['message'])) {
         echo "<p style='color:green'>Email sent successfully!</p>";
+        unset($_SESSION['sendto']);
     } else {
         echo "<p style='color:red'>Email not sent!</p>";
     }
