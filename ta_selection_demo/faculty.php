@@ -3,8 +3,8 @@
 session_start();
 require_once 'connection.php';
 
-//$_SESSION['ldap_id'] = 'sample_ldap';
-//$_SESSION['user_type']='faculty';
+$_SESSION['ldap_id'] = '140070009';
+$_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
 {
@@ -216,6 +216,14 @@ if(isset($_POST['update_student_applications']))
                 {
                     die("Some error occured. Contact Aman Virani at 9821212128");
                 }
+            }
+
+            if($value == "Selected")
+            {
+                //set countdown
+
+                $query = "UPDATE student_applications SET student_answer='' WHERE ldap_id='".$student_ldap."'";
+
             }
 
             
