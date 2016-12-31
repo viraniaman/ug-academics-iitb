@@ -3,8 +3,8 @@
 session_start();
 require_once 'connection.php';
 
-// $_SESSION['ldap_id'] = 'sample_ldap';
-// $_SESSION['user_type']='faculty';
+$_SESSION['ldap_id'] = 'sample_ldap';
+$_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
 {
@@ -40,7 +40,18 @@ $_SESSION['course_code'] = $prof_details['course_code'];
 $student_status_set = NULL;
 
 
-
+if(isset($_POST['send_mail_to_selected']))
+{
+	if(!empty($_POST['sendto']))
+	{
+		$_SESSION['sendto'] = $_POST['sendto'];
+		header('location: send_to_selected.php');
+	}
+	else
+	{
+		$student_status_set = "Please select students to send mail to first!";
+	}
+}
 
 if(isset($_POST['update_student_applications']))
 {
@@ -190,12 +201,16 @@ if(isset($_POST['update_student_applications']))
             {
                 $query2 = "UPDATE student_details SET selected='' WHERE ldap_id='$student_ldap'";
                 $query3 = "UPDATE student_applications SET student_answer='' WHERE ldap_id='".$student_ldap."'";
-                if(mysqli_query($conn, $query2))
+                if(mysqli_query($conn, $query3))
                 {
-                    if(!mysqli_query($conn, $query3))
-                    {
-                        die("Some error occured. Contact Aman Virani at 9821212128");
-                    }
+					if($student_info['selected']==$_SESSION['course_code'])
+					{
+						if(!mysqli_query($conn, $query2))
+                    	{
+                        	die("Some error occured. Contact Aman Virani at 9821212128");
+                    	}
+					}			
+                    
                 }
                 else
                 {
@@ -405,6 +420,7 @@ if(isset($_POST['update_student_applications']))
             <form action="faculty.php" method="post">
                 
                 <input type="submit" name="update_student_applications" value="Update Table" style="float:right"/><br/><br/>
+				<input type="submit" name="send_mail_to_selected" value="Mail Selected Students" style="float:right"/><br/><br/>
                 
             <table class="table sortable" >
                 
@@ -420,6 +436,7 @@ if(isset($_POST['update_student_applications']))
                     <th>Set Selection Status</th>
                     <th>Waitlist No.</th>
                     <th>Student Replied</th>
+					<th>Check to send email</th>
                 </tr>
                 
                 <?php
@@ -556,7 +573,9 @@ if(isset($_POST['update_student_applications']))
                         . $row['student_answer']
                         . "</td>";
                         
+						echo "<td> <input type='checkbox' name='sendto[]' value='".$row['ldap_id']."@iitb.ac.in'></input> </td>";
                         echo "</tr>";
+
                         
                     }
                 }

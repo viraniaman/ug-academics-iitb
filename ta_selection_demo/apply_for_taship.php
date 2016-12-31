@@ -122,7 +122,7 @@ if($_POST['button']=='Accept TAship')
     {
         $accept_query = "UPDATE student_applications SET student_answer='Accepted'"
                 . " WHERE ldap_id='$ldap_id' AND course_code='$course_code'";
-        $accept_query2 = "UPDATE student_details SET selected='True' WHERE ldap_id='$ldap_id'";
+        $accept_query2 = "UPDATE student_details SET selected='$course_code' WHERE ldap_id='$ldap_id'";
         if(mysqli_query($conn, $accept_query))
         {
             if(mysqli_query($conn, $accept_query2))

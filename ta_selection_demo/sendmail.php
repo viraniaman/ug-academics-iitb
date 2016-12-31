@@ -14,7 +14,7 @@ if(!isset($_SESSION['ldap_id']))
 
 function send_mail($to, $from, $subject, $message)
 {
-    $from = $_SESSION['ldap_id'] . '@iitb.ac.in';
+    $from = $from . '@iitb.ac.in';
     $ldap_id=$_SESSION['ldap_id'];
     $passwd=$_SESSION['passwd'];
     $message = Swift_Message::newInstance()

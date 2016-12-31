@@ -17,6 +17,7 @@ if($_SESSION['user_type']!='faculty')
 
 $course_info = array();
 $course_code = $string = preg_replace('/\s+/', '', $_POST['course_code']);
+$course_code = strtoupper($course_code);
 $course_name = $_POST['course_name'];
 $deadline = $_POST['deadline'];
 $eligibility_criteria = $_POST['eligibility_criteria'];
