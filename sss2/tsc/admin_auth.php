@@ -1,3 +1,3 @@
 <?php
-$authorised = array('aastha','131030001','14D110023','14B030001');
+$authorised = array('tripathi.anay','ritwickchaudhry','150040084','15d110012','15d070025','150040042');
 ?>

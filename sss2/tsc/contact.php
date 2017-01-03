@@ -68,8 +68,8 @@ if(isset($_POST['submit'])) {
                         <img src="image/team/22.jpg" alt="" style="">
                         <div class="text">
                             
-                            <p class="text-muted">Abhishek Khadiya<br><a href="mailto:abhishekkhadiya@gmail.com">abhishekkhadiya@gmail.com</a>
-                                <br><a>+91-750-612-2588</a>
+                            <p class="text-muted">Ritwick Chaudhry<br><a href="mailto:ritwickchaudhry@gmail.com">ritwickchaudhry@gmail.com</a>
+                                <br><a>+91-900-452-7877</a>
                             </p>
                         </div>
                         
@@ -95,8 +95,8 @@ if(isset($_POST['submit'])) {
                         <img src="image/team/11.jpg" alt="" style="margin:auto">
                         <div class="text">
                         
-                        <p class="text-muted">Gaurav Jain<br><a href="mailto:gauravjn9511@gmail.com">gauravjn9511@gmail.com</a>
-                        <br><a>+91-961-959-0360</a></p></div>
+                        <p class="text-muted">Prakhar Jain<br><a href="mailto:prakharjain1114@gmail.com">prakharjain1114@gmail.com</a>
+                        <br><a>+91-882-829-0628</a></p></div>
                         <!--<ul class="list-inline social-buttons">
                             
                             <li><a target="_blank" href="https://www.facebook.com/aman.virani.71"><i class="fa fa-facebook"></i></a>
@@ -109,8 +109,8 @@ if(isset($_POST['submit'])) {
                         <img src="image/team/44.jpg" alt="" style="margin:auto">
                         <div class="text">
                         
-                        <p class="text-muted">Shivani Chavan<br><a href="mailto:shivanidchavan@gmail.com">shivanidchavan@gmail.com</a>
-                      <br><a>+91-916-782-0456</a></p></div>
+                        <p class="text-muted">Ranvita Agrawal<br><a href="mailto:ranvita.agrawal@gmail.com">ranvita.agrawal@gmail.com</a>
+                      <br><a>+91-998-758-2607</a></p></div>
                         <!--<ul class="list-inline social-buttons">
                             
                             <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100000399235548"><i class="fa fa-facebook"></i></a>
@@ -125,8 +125,8 @@ if(isset($_POST['submit'])) {
                         <img src="image/team/33.jpg" alt="" style="margin:auto">
                         <div class="text">
                         
-                        <p class="text-muted">Aditya Kalra<br><a href="mailto:adityakalra2102@gmail.com">adityakalra2102@gmail.com</a>
-                      <br><a>+91-773-874-4849</a></p></div>
+                        <p class="text-muted">Anmol Gupta<br><a href="mailto:iitb.anmol@gmail.com">iitb.anmol@gmail.com</a>
+                      <br><a>+91-882-829-2081</a></p></div>
                         <!--<ul class="list-inline social-buttons">
                             
                             <li><a target="_blank" href="https://www.facebook.com/jagesh.golwala.3"><i class="fa fa-facebook"></i></a>
@@ -139,8 +139,8 @@ if(isset($_POST['submit'])) {
                         <img src="image/team/55.jpg" alt="" style="margin:auto">
                         <div class="text">
                         
-                        <p class="text-muted">Karan Mehta<br><a href="mailto:knmehta12@gmail.com">knmehta12@gmail.com</a>
-                      <br><a>+91-828-611-4879</a></p></div>
+                        <p class="text-muted">Anant Jain<br><a href="mailto:antujain15@gmail.com">antujain15@gmail.com</a>
+                      <br><a>+91-704-580-0195</a></p></div>
                         <!--<ul class="list-inline social-buttons">
                             
                             <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100005270417676"><i class="fa fa-facebook"></i></a>
