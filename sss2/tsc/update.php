@@ -136,11 +136,11 @@ Venue: <?php echo $row1['venue']."\n"; ?>
 The sessions will focus more on <?php echo $row1['topics'];?>.
 For further details or clarifications feel free to contact the undersigned
 Regards,
-Shivani Chavan
-Coordinator 2015-16
+Ritwick Chaudhry
+Institute Secretary Academic Affairs
 Student Support Services
-Contact No: 9167820456
-Email Id: shivanidchavan@gmail.com</textarea>
+Contact No: +91-900-452-7877
+Email Id: ritwickchaudhry@gmail.com</textarea>
       </div>
       <input type="hidden" name="courseid" value="<?php echo $row1['course_id'];?>">
       <input type="hidden" name="id" value="<?php echo $row1['id'];?>">

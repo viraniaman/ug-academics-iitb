@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
       <div class="navbar-footer pull-right" >
-        <a class="navbar-brand" rel="home" href="#" style="font-size: 12px;">Created by: Aastha Suman</a>
+        <a class="navbar-brand" rel="home" href="#" style="font-size: 12px;">Created by: Web team, IITB UG Aademics</a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
