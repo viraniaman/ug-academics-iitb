@@ -532,8 +532,9 @@ if(isset($_POST['update_student_applications']))
                         }
                         
                         echo "<td>" 
-                        . "<input type='submit' name='view_sop' value='View SOP' onclick='see_sop(\""
-                                .$prof_details['sop_questions']."\", \"".$row['sop_answers']."\")'/>"
+                        . "<a href='view_student_sop.php?ldap_id=".$row['ldap_id']."&course_code=".$row['course_code']."'>View SOP</a>"
+                        //. "<input type='submit' name='view_sop' value='View SOP' onclick='see_sop(\""
+                        //       .$prof_details['sop_questions']."\", \"".$row['sop_answers']."\")'/>"
                         . "</td>";
                         
                         $selected = NULL;

@@ -5,7 +5,7 @@
     
     //require_once('department_assoc_array.php');
 //    
-// $_SESSION['ldap_id'] = 'stu_ldap_1';
+// $_SESSION['ldap_id'] = 'stu_ldap_3';
 // $_SESSION['user_type']='student';
     
     if(!isset($_SESSION['ldap_id']))

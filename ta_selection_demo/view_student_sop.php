@@ -43,10 +43,38 @@ if($_SESSION['user_type']!='faculty')
         <div class="container">
             
             <?php
+
+            $stu_ldap_id = $_GET['ldap_id'];
+            $course_code = $_GET['course_code'];
+
+            $query = "SELECT * FROM student_applications WHERE ldap_id='$stu_ldap_id' AND course_code='$course_code'";
+
+            $application_info = NULL;
+
+            $result = mysqli_query($conn, $query);
+            if(mysqli_num_rows($result)>0)
+            {
+                while($row = mysqli_fetch_assoc($result))
+                {
+                    $application_info = $row;
+                }
+            }
+
+            $query = "SELECT * FROM course_info WHERE course_code='$course_code'";
+
+            $course_info = NULL;
+
+            $result = mysqli_query($conn, $query);
+            if(mysqli_num_rows($result)>0)
+            {
+                while($row = mysqli_fetch_assoc($result))
+                {
+                    $course_info = $row;
+                }
+            }
             
-            $sop_questions = explode(";@;", $_POST['sop_questions']);
-            $sop_answers = explode(";@;", $_POST['sop_answers']);
-            $student_name = $_POST['student_name'];
+            $sop_questions = explode(";@;", $course_info['sop_questions']);
+            $sop_answers = explode(";@;", $application_info['sop_answers']);
             
             for($i = 0; $i < count($sop_questions); $i++)
             {
@@ -61,7 +89,7 @@ if($_SESSION['user_type']!='faculty')
                 }
             }
             
-            echo "<h4>To set the status of $student_name, go <a href='faculty.php'>back</a></h4>"
+            echo "<h4>To set the status of this student, go <a href='faculty.php'>back</a></h4>";
             
             ?>
             
