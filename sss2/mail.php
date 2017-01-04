@@ -16,7 +16,7 @@ $passwd=$_SESSION['passwd'];
 $message = Swift_Message::newInstance()
 -> setSubject ('Query : ' . $_POST['subject'])
 -> setFrom (array ($from))
--> setTo (array ('aastha.suman717@gmail.com','shivanidchavan@gmail.com'))
+-> setTo (array ('tripathi.anay@gmail.com','iitb.anmol@gmail.com'))
 -> setBody ("From: " . $_SESSION['ldap'] . "@iitb.ac.in\nFull Name: " . $_POST['name'] . "\nQuery: " . $_POST['message'] ."\n");
 
 $transport = Swift_SmtpTransport::newInstance('smtp-auth.iitb.ac.in', 25, 'tls')

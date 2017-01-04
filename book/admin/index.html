@@ -1,0 +1,51 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/preview.min.css" rel="stylesheet">
+    <!--link href="styles/font-awesome.min.css" rel="stylesheet"-->
+
+</head>
+<body>
+    
+
+
+    <div class="divider large visible-desktop"></div>
+    <div class="divider  hidden-desktop"></div>
+
+    <div class="container">
+        <div class="row-fluid" id="demo-1">
+            <div class="span10 offset1">
+                <h4>Admin Panel</h4>
+                <div class="tabbable custom-tabs tabs-animated  flat flat-all hide-label-980 shadow track-url auto-scroll">
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel1">
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <h4><i class="icon-user"></i>&nbsp;&nbsp; Login Here</h4>
+                                    <form action="login.php" method="post">
+	                                    <label>Username</label>
+	                                    <input name="l_uname" type="text" maxlength="20" value="" class="input-block-level">
+	                                    <label>Password </label>
+	                                    <input name="l_pwd" type="password" maxlength="20" value="" class="input-block-level">
+	                                    
+	                                    <br>
+
+	                                    <input type="submit" name="login" value="Sign In" class="btn"/>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
