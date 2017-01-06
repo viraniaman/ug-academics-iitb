@@ -157,6 +157,8 @@ if(isset($_POST['update_student_applications']))
 
             //get current status
 
+            echo "$student_ldap";
+
             $student_info = NULL;
 
             $student_query = "SELECT * FROM student_details WHERE ldap_id='".$student_ldap."'";
