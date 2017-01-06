@@ -101,7 +101,7 @@ if(isset($_POST['update_student_applications']))
     
     foreach ($_POST as $key => $value)
     {        
-        if(preg_match("/^message_to_student/", $key))
+        if(substr( $key, 0, 18 ) === "message_to_student")
         {
             $student_ldap = substr($key, 19);
             $query = "UPDATE student_applications SET message_to_student='".mysqli_real_escape_string($conn, $value)."' "
@@ -111,7 +111,7 @@ if(isset($_POST['update_student_applications']))
                 die(mysqli_error($conn));
             }
         }
-        if(preg_match("/^status/", $key))
+        if(substr( $key, 0, 6 ) === "status")
         {
             $student_ldap = substr($key, 7);
             
@@ -253,7 +253,7 @@ if(isset($_POST['update_student_applications']))
             }
         }
         
-        if(preg_match("/^waitlist_no/", $key))
+        if(substr( $key, 0, 11 ) === "waitlist_no")
         {
             $student_ldap = substr($key, 12);
             
