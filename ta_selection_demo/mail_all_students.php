@@ -43,13 +43,15 @@ if(isset($_POST['submit-btn']))
         if(preg_match("/^ldap_id_/", $key))
         {
 
-            if(strpos($value, '_')>=0)
+            if(strpos($value, '_') !== false)
             {
                 if(print_ldap_info($value) == 1)
                 {
-                    $false_ldap = $value;
                     $true_ldap = str_replace('_', '.', $value);
-                    $value = $true_ldap;
+                    if(print_ldap_info($true_ldap) != 1)
+                    {
+                        $value = $true_ldap;
+                    }
                 }
             }
 
