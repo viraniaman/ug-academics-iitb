@@ -16,6 +16,19 @@ if($_SESSION['user_type']!='faculty')
     header("location: index.php");
 }
 
+function print_ldap_info($ldap_id) {
+    $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
+    $sr = ldap_search($ds, "dc=iitb,dc=ac,dc=in", "(uid=$ldap_id)");
+    $info = ldap_get_entries($ds, $sr);
+    
+    return count($info);
+    
+//    $l_id = $info[0]['dn'];
+//    $l_id_arr = explode(",",$l_id);
+//    $user_is_faculty = endsWith($l_id_arr[1],"FAC");
+//    return $user_is_faculty;
+}
+
 $content = NULL;
 
 if(isset($_POST['submit-btn']))
@@ -29,6 +42,17 @@ if(isset($_POST['submit-btn']))
     {
         if(preg_match("/^ldap_id_/", $key))
         {
+
+            if(strpos($value, '_')>=0)
+            {
+                if(print_ldap_info($value) == 1)
+                {
+                    $false_ldap = $value;
+                    $true_ldap = str_replace('_', '.', $value);
+                    $value = $true_ldap;
+                }
+            }
+
             array_push($to, $value."@iitb.ac.in");
         }
     }
