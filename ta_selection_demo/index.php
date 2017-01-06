@@ -109,6 +109,11 @@ if (isset($_SESSION['ldap_id'])) {
 
 <?php
 
+function sanitize_username($username)
+{
+    return str_replace(".", "_", $username);
+}
+
 function ldap_auth($ldap_id, $ldap_password) {
     $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
     if ($ldap_id == '')
@@ -146,7 +151,7 @@ if (isset($_POST['login1'])) {
     if (ldap_auth($username, $password)) {
 
         if (is_faculty($username)) {
-            $_SESSION['ldap_id'] = $username;
+            $_SESSION['ldap_id'] = sanitize_username($username);
             $_SESSION['user_type'] = 'faculty';
 
             $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
@@ -171,7 +176,7 @@ if (isset($_POST['login1'])) {
     if (ldap_auth($username, $password)) {
 
         if (!is_faculty($username)) {
-            $_SESSION['ldap_id'] = $username;
+            $_SESSION['ldap_id'] = sanitize_username($username);
             $_SESSION['user_type'] = 'student';
             $next_page = "location: student.php";
 
