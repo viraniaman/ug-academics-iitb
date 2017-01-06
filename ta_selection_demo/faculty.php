@@ -157,7 +157,7 @@ if(isset($_POST['update_student_applications']))
 
             //get current status
 
-            echo "$student_ldap";
+            echo "$student_ldap\n";
 
             $student_info = NULL;
 
