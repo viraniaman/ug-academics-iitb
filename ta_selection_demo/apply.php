@@ -206,6 +206,14 @@
         <?php echo $course_info['prof_name']; ?>
         </td>
         </tr>
+
+        <tr>
+        <th>Course Duration</th>
+        <td>
+        <?php echo $course_info['duration']; ?>
+        </td>
+        </tr>
+
         
         <tr>
         <th>My Status of Application</th>
@@ -279,9 +287,16 @@
         return false;
     }
     
-    $accept_state = $waitlist_state = $apply_state = $rejected_state = $interview_pending_state = false;
+    $semi_apply_state = $accept_state = $waitlist_state = $apply_state = $rejected_state = $interview_pending_state = $half_sem_var = false;
+
+    if($course_info['duration'] == "Second Half Semester" || $course_info['duration'] == "First Half Semester")
+    {
+        $half_sem_var = true;
+    }
     
-    //Getting accept_state
+    //Getting accept_state 
+
+
     
     if($student_application_info['status_of_application'] == "Selected" &&
             $student_application_info['student_answer'] != 'Selected TAship of some other professor')
@@ -290,7 +305,38 @@
     }
     
     //Getting apply state
+
     
+
+    // if($student_info['selected']!=NULL || $student_info['selected']!="")
+    // {
+    //     $course_selected_in = $student_info['selected'];
+        
+    //     //get course details of course the student is selected in
+
+    //     $query = "SELECT * FROM course_info WHERE course_code='$course_selected_in'";
+    //     $result = mysqli_query($conn, $query);
+    //     $course_info1 = NULL;
+    //     if(mysqli_num_rows($result)>0)
+    //     {
+    //         while($row = mysqli_fetch_assoc($result))
+    //         {
+    //             $course_info1 = $row;
+    //         }
+    //     }
+    //     else
+    //     {
+    //         die("There was some problem allowing you to select a half semester course. Contact Aman Virani");
+    //     }
+
+    //     else if($course_info1['duration'] === "First Half Semester" && $course_info['duration'] === "Second Half Semester" && $student_application_info['status_of_application'] == "Not applied")
+    //     {
+    //         $semi_apply_state = true;
+    //     }
+
+
+    // }
+
     if($student_application_info['status_of_application'] == "Not applied")
     {
         if(strtotime(date('Y-m-d')) > strtotime($_POST['deadline']))
@@ -298,10 +344,10 @@
             $apply_state = false;
             echo "<p style='float:right;color:red'>Deadline has passed!</p>";
         }
-        else if(num_of_applications($_SESSION['ldap_id']) >= 3)
+        else if(num_of_applications($_SESSION['ldap_id']) >= 3 && !$semi_apply_state)
         {
             $apply_state = false;
-            echo "<p style='float:right;color:red'>You have already applied for 3 courses!</p>";
+            echo "<p style='float:right;color:red'>You have already applied for 3 or more courses!</p>";
         }
         else if($student_info['cpi']==NULL || $student_info['cpi']=="" || 
                 $student_info['contact_number']==NULL || $student_info['contact_number']=="" ||
@@ -316,6 +362,8 @@
         }
         
     }
+
+    
     
     if($student_application_info['status_of_application'] == "Waitlisted")
     {
@@ -332,13 +380,37 @@
         $interview_pending_state = true;
     }
 
-    if($student_info['selected']!="" or $student_info['selected']!=NULL)
+    //if selected in a full semester course
+
+    if(($student_info['selected']!="" or $student_info['selected']!=NULL))
     {
-        $accept_state = $waitlist_state = $apply_state = $rejected_state = $interview_pending_state = false;
+        $course_info1 = NULL;
+        $query = "SELECT * FROM course_info WHERE course_code='".$student_info['selected']."'";
+        $result = mysqli_query($conn, $query);
+        if(mysqli_num_rows($result)>0)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                $course_info1 = $row;
+            }
+        }
+        else
+        {
+            die("Some error occured while fetching course info2. Please contact Aman Virani at 9821212128");
+        }
+        if(($course_info1['duration']=="Full Semester")
+            || ($course_info['duration']=="First Half Semester" && $course_info1['duration']=="First Half Semester")
+            || ($course_info['duration']=="Second Half Semester" && $course_info1['duration']=="Second Half Semester"))
+        {
+            $semi_apply_state = $accept_state = $waitlist_state = $apply_state = $rejected_state = false;
+        }
+        
     }
+
+    //end if
     
     echo "<form action='apply_for_taship.php' method='post' style='float:right;' id='submit_form' onsubmit='return check_empty_form()'>";
-    echo "<p style='color:red'> <a onclick='window.open(\"disclaimer.php\")'>Please read the disclaimer first here!</a> </p>";
+    echo "<p style='color:red'> <a onclick='window.open(\"disclaimer.php\")'>Please read the disclaimer first here!</a> <br> </p>";
     if($accept_state)
     {
         if($student_application_info['student_answer']!='Accepted')
@@ -352,7 +424,7 @@
         }
         
     }
-    if($apply_state)
+    if($apply_state || $semi_apply_state)
     {
         echo "<input type='submit' value='Apply for TAship' name='button' onclick='window.confirm(\"Please confirm that you have read the disclaimer and conform to the requirements\")'/><br><br>";
     }

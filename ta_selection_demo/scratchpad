@@ -1,0 +1,9 @@
+list of things to be done for adding half semester and full semester table details:
+
+1. add column in table
+2. add option in faculty form
+3. set current entries manually
+4. change in apply.php. Allow application of second half semester courses if student is selected only in first half semester course.
+5. change in my_applications.php: stop removal of other courses
+6. change in student.php show duration on main page
+7. change in my_applications.php show duration

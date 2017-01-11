@@ -36,7 +36,7 @@ function get_reformatted_date($date)
     $date_array2 = explode("-", $date);
     if(count($date_array2) == 3)
     {
-        return $date_array2;
+        return $date;
     }
     return $date_array1[2]."-".$date_array1[0]."-".$date_array1[1];
 }
@@ -93,7 +93,7 @@ if(course_exists())
             . "deadline='$deadline', prof_name='$prof_name', eligibility_criteria='$eligibility_criteria', "
             . "department='$department', interview_start_date='$interview_start_date',"
             . "interview_end_date='$interview_end_date', sop_questions='$sop_questions', course_details='$course_details',"
-            . "prof_ldap='".$_SESSION['ldap_id']."' WHERE course_code='$course_code'";
+            . "prof_ldap='".$_SESSION['ldap_id']."', duration='".$_POST['duration']."' WHERE course_code='$course_code'";
     if(mysqli_query($conn, $query))
     {
         $_SESSION['course_info_edit_successful'] = 1;
@@ -110,9 +110,9 @@ else
 {
     $query = "INSERT INTO course_info (course_code, course_name, prof_name, course_details, "
             . "eligibility_criteria, deadline, department, interview_start_date, "
-            . "interview_end_date, sop_questions, prof_ldap) VALUES ('$course_code', '$course_name', "
+            . "interview_end_date, sop_questions, prof_ldap, duration) VALUES ('$course_code', '$course_name', "
             . "'$prof_name', '$course_details', '$eligibility_criteria', '$deadline', "
-            . "'$department', '$interview_start_date', '$interview_end_date', '$sop_questions', '".$_SESSION['ldap_id']."')";
+            . "'$department', '$interview_start_date', '$interview_end_date', '$sop_questions', '".$_SESSION['ldap_id']."', '".$_POST['duration']."')";
     
     if(mysqli_query($conn, $query))
     {

@@ -1,0 +1,5 @@
+1. Make changes in production database columns if any.
+2. Edit the connection.php file
+3. Remove all the debug information (session variables)
+4. Push changes to git
+5. Pull changes to production server

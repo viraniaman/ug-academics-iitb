@@ -238,6 +238,19 @@ $sop_questions = explode(";@;", $course_info['sop_questions']);
                         <?php echo "<input type='text' name='course_name' value='".$course_info['course_name']."'/>";?>
                     </td>
                 </tr>
+
+                <tr>
+                    <th>
+                        Course Duration:
+                    </th>
+                    <td>
+                        <select name='duration' value=<?php echo "'".$course_info['duration']."'" ?> >
+                        <option value="Full Semester" <?php if($course_info['duration']=="Full Semester") echo "selected" ?> >Full Semester</option>
+                        <option value="First Half Semester" <?php if($course_info['duration']=="First Half Semester") echo "selected" ?> >First Half Semester</option>
+                        <option value="Second Half Semester" <?php if($course_info['duration']=="Second Half Semester") echo "selected" ?> >Second Half Semester</option>
+                        </select>
+                    </td>
+                </tr>
                 
                 <tr>
                     <th>

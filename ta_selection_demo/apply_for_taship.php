@@ -54,7 +54,7 @@ function get_status()
 
 function get_num_of_current_courses($ldap_id)
 {
-    $query = "SELECT * FROM student_applications WHERE ldap_id='".$ldap_id."'";
+    $query = "SELECT * FROM student_applications WHERE ldap_id='".$ldap_id."' AND NOT student_answer='Accepted'";
     $result = mysqli_query($conn, $query);
     return mysqli_num_rows($result);
 }
@@ -85,6 +85,29 @@ function get_sop_answers()
     }
     return mysqli_real_escape_string($conn, $string);
 }
+
+function first_half_sem_course($course1_code)
+{
+    global $conn;
+
+    $query1 = "SELECT * FROM course_info WHERE course_code='$course1_code'";
+    $result1 = mysqli_query($conn, $query1);
+    if(mysqli_num_rows($result1)>0)
+    {
+        while($row = mysqli_fetch_assoc($result1))
+        {
+            if($row['duration'] == "First Half Semester")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
+}
 //</editor-fold>
 
 if($_POST['button']=='Apply for TAship')
@@ -111,8 +134,97 @@ if($_POST['button']=='Apply for TAship')
 
 if($_POST['button']=='Accept TAship')
 {
+    //getting student info
+
+    $student_info = NULL;
     
-    $query = "UPDATE student_applications SET student_answer='Selected TAship of some other professor' WHERE ldap_id='$ldap_id' AND NOT course_code='$course_code'";
+    $student_query = "SELECT * FROM student_details WHERE ldap_id='".$_SESSION['ldap_id']."'";
+    $result_student = mysqli_query($conn, $student_query);
+    if(mysqli_num_rows($result_student)>0)
+    {
+        while($row = mysqli_fetch_assoc($result_student))
+        {
+            $student_info = $row;
+        }
+    }
+    else
+    {
+        die("Some error occured while fetching student info. Please contact Aman Virani at 9821212128");
+    }
+
+    //getting half sem courses
+
+    $query = NULL;
+
+    if(first_half_sem_course($course_code))
+    {
+
+        $second_half_sem_applications  = array();
+
+        $query1 = "SELECT * FROM student_applications WHERE ldap_id='".$_SESSION['ldap_id']."'";
+        $result1 = mysqli_query($conn, $query1);
+        if(mysqli_num_rows($result1)>0)
+        {
+            while($row = mysqli_fetch_assoc($result1))
+            {
+                $query2 = "SELECT * FROM course_info WHERE course_code='".$row['course_code']."'";
+                $result2 = mysqli_query($conn, $query2);
+                if(mysqli_num_rows($result2)>0)
+                {
+                    while($row2 = mysqli_fetch_assoc($result2))
+                    {
+                        if($row2['duration'] == "Second Half Semester")
+                        {
+                            array_push($second_half_sem_applications, $row['course_code']);
+                        }
+                    }
+                }
+            }
+        }
+
+        $query = "UPDATE student_applications SET student_answer='Selected TAship of some other professor' WHERE ldap_id='$ldap_id' AND NOT course_code='$course_code' ";
+
+        foreach ($second_half_sem_applications as $key => $value) {
+            $string = "AND NOT course_code='".$value."' ";
+            $query .= $string;
+        }
+
+    }
+    else
+    {
+        $first_half_sem_applications  = array();
+
+        $query1 = "SELECT * FROM student_applications WHERE ldap_id='".$_SESSION['ldap_id']."'";
+        $result1 = mysqli_query($conn, $query1);
+        if(mysqli_num_rows($result1)>0)
+        {
+            while($row = mysqli_fetch_assoc($result1))
+            {
+                $query2 = "SELECT * FROM course_info WHERE course_code='".$row['course_code']."'";
+                $result2 = mysqli_query($conn, $query2);
+                if(mysqli_num_rows($result2)>0)
+                {
+                    while($row2 = mysqli_fetch_assoc($result2))
+                    {
+                        if($row2['duration'] == "First Half Semester" && $row['status_of_application']=='Selected')
+                        {
+                            array_push($first_half_sem_applications, $row['course_code']);
+                        }
+                    }
+                }
+            }
+        }
+
+        $query = "UPDATE student_applications SET student_answer='Selected TAship of some other professor' WHERE ldap_id='$ldap_id' AND NOT course_code='$course_code' ";
+
+        foreach ($first_half_sem_applications as $key => $value) {
+            $string = "AND NOT course_code='".$value."' ";
+            $query .= $string;
+        }
+    }
+
+
+    //end getting half sem courses
 
     //$query = "UPDATE student_applications SET selected='True' WHERE ldap_id='$ldap_id'";
     
@@ -150,7 +262,7 @@ if($_POST['button']=='Accept TAship')
     }
     else
     {
-        echo "Successfully unset the clock";
+        echo "\n Successfully unset the clock";
     }
 
     

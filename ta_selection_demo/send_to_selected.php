@@ -74,7 +74,39 @@ if($_SESSION['user_type']!='faculty')
 
 <?php
 
+function print_ldap_info($ldap_id) {
+    $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
+    $sr = ldap_search($ds, "dc=iitb,dc=ac,dc=in", "(uid=$ldap_id)");
+    $info = ldap_get_entries($ds, $sr);
+    
+    return count($info);
+    
+//    $l_id = $info[0]['dn'];
+//    $l_id_arr = explode(",",$l_id);
+//    $user_is_faculty = endsWith($l_id_arr[1],"FAC");
+//    return $user_is_faculty;
+}
+
+
 $to = array_values($_SESSION['sendto']);
+
+foreach ($to as $key => $value) {
+    # code...
+
+    $ldap_id = substr($value, 0, strpos($value, "@"));
+
+    if(strpos($ldap_id, '_') !== false)
+    {
+        if(print_ldap_info($ldap_id) == 1)
+        {
+            $true_ldap = str_replace('_', '.', $ldap_id);
+            if(print_ldap_info($true_ldap) != 1)
+            {
+                $to[$key] = $true_ldap."@iitb.ac.in";
+            }
+        }
+    }
+}
 
 if (isset($_POST['submit-btn'])) {
     if (send_mail($to, $_SESSION['ldap_id'], $_POST['subject'], $_POST['message'])) {

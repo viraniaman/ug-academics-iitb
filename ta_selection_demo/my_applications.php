@@ -15,24 +15,31 @@ $ldap_id = $_SESSION['ldap_id'];
 ?>
 
 <?php
+
+
+
+
 //Removing everything else if accepted in one course
 
-$sql = "SELECT * FROM student_applications WHERE ldap_id='" . $ldap_id . "'";
+// $sql = "SELECT * FROM student_applications WHERE ldap_id='" . $ldap_id . "'";
 
-$result = mysqli_query($conn, $sql);
+// $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 1) {
+// if (mysqli_num_rows($result) > 1) {
 
-    // output data of each row
-    while ($row = mysqli_fetch_assoc($result)) {
+//     // output data of each row
+//     while ($row = mysqli_fetch_assoc($result)) {
 
-        if ($row['student_answer'] == 'Accepted') {
-            $query2 = "UPDATE student_applications SET student_answer='Selected TAship of some other professor' WHERE ldap_id='$ldap_id' AND NOT course_code='" . $row['course_code'] . "'";
-            if (!mysqli_query($conn, $query2)) {
-                echo "Some problem with deleting the rest of the entries after getting selected in one. "
-                . "Contact Aman Virani at 9821212128.";
-            }
-        }
+//         if ($row['student_answer'] == 'Accepted') {
+
+//             //have to make sure the application of course...
+
+//             $query2 = "UPDATE student_applications SET student_answer='Selected TAship of some other professor' WHERE ldap_id='$ldap_id' AND NOT course_code='" . $row['course_code'] . "'";
+//             if (!mysqli_query($conn, $query2)) {
+//                 echo "Some problem with deleting the rest of the entries after getting selected in one. "
+//                 . "Contact Aman Virani at 9821212128.";
+//             }
+//         }
         /*
           $result2 = mysqli_query($conn, "SELECT * FROM course_info WHERE course_code='".$course_code1."'");
 
@@ -61,8 +68,8 @@ if (mysqli_num_rows($result) > 1) {
           }
          * 
          */
-    }
-}
+//     }
+// }
 ?>
 
 
@@ -132,6 +139,7 @@ if (mysqli_num_rows($result) > 1) {
                     <tr>
                         <th>Course Code</th>
                         <th>Course Name</th>
+                        <th>Duration</th>
                         <th>Professor's Name</th>
                         <th>Department</th>
                         <th>Course Details</th>
@@ -163,6 +171,7 @@ if (mysqli_num_rows($result) > 1) {
                     <tr>
                         <td>" . $row2['course_code'] . "</td>
                         <td>" . $row2['course_name'] . "</td>
+                        <td>" . $row2['duration'] . "</td>
                         <td>" . $row2['prof_name'] . "</td>
                         <td>" . $row2['department'] . "</td>
                         <td>" . $row2['course_details'] . "</td>

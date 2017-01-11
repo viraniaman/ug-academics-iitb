@@ -1,0 +1,9 @@
+stuff to be sent from ldap server
+
+name, ldap id, password, department, user type
+
+login page - after authentication, i have all the information. i just have to figure out a way to send it.
+
+login page authentication
+get information
+request to 

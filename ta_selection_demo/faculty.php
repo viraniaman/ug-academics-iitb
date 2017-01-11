@@ -3,7 +3,7 @@
 session_start();
 require_once 'connection.php';
 
-// $_SESSION['ldap_id'] = '140070009';
+// $_SESSION['ldap_id'] = 'fac_ldap_2';
 // $_SESSION['user_type']='faculty';
 
 if(!isset($_SESSION['ldap_id']))
@@ -200,7 +200,7 @@ if(isset($_POST['update_student_applications']))
             if($status == 'Selected' && $value != "Selected")
             {
                 $query2 = "UPDATE student_details SET selected='' WHERE ldap_id='$student_ldap'";
-                $query3 = "UPDATE student_applications SET student_answer='' WHERE ldap_id='".$student_ldap."'";
+                $query3 = "UPDATE student_applications SET student_answer='' WHERE ldap_id='".$student_ldap."' AND NOT course_code='".$student_info['selected']."'";
                 if(mysqli_query($conn, $query3))
                 {
 					if($student_info['selected']==$_SESSION['course_code'])

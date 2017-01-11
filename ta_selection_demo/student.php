@@ -4,7 +4,7 @@
     require_once('connection.php');
     
     //require_once('department_assoc_array.php');
-//    
+// //    
 // $_SESSION['ldap_id'] = 'stu_ldap_3';
 // $_SESSION['user_type']='student';
     
@@ -94,6 +94,7 @@
       <tr>
         <th>Course Code</th>
         <th>Course Name</th>
+        <th>Course Duration</th>
         <th>Professor's Name</th>
         <th>Department</th>
         <th>Prerequisites</th>
@@ -130,6 +131,7 @@
             <tr>
                 <td>".$row['course_code']."</td>
                 <td>".$row['course_name']."</td>
+                <td>".$row['duration']."</td>
                 <td>".$row['prof_name']."</td>
                 <td>".$row['department']."</td>
                 <td>".$row['eligibility_criteria']."</td>
