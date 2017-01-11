@@ -344,7 +344,7 @@
             $apply_state = false;
             echo "<p style='float:right;color:red'>Deadline has passed!</p>";
         }
-        else if(num_of_applications($_SESSION['ldap_id']) >= 3 && !$semi_apply_state)
+        else if(num_of_applications($_SESSION['ldap_id']) >= 3 && !$half_sem_var)
         {
             $apply_state = false;
             echo "<p style='float:right;color:red'>You have already applied for 3 or more courses!</p>";
