@@ -7,14 +7,15 @@ try
     die($ex);
 };
 require_once 'department_assoc_array.php';
+session_start();
 
-if (isset($_SESSION['ldap_id'])) {
-    if ($_SESSION['user_type'] == 'student' && $_SESSION['ldap_id']!='sunnysoni' ) {
-        header("location: student.php");
-    } else {
-        header("location: faculty.php");
-    }
-}
+// if (isset($_SESSION['ldap_id'])) {
+//     if ($_SESSION['user_type'] == 'student') {
+//         header("location: http://127.0.0.1:8000/ppa/student/");
+//     } else {
+//         header("location: http://127.0.0.1:8000/ppa/professor/");
+//     }
+// }
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -148,23 +149,27 @@ if (isset($_POST['login1'])) {
 
         if (is_faculty($username)) {
             $_SESSION['ldap_id'] = $username;
-            $_SESSION['user_type'] = 'faculty';
+            $_SESSION['user_type'] = 'professor';
 
             $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
             $sr = ldap_search($ds, "dc=iitb,dc=ac,dc=in", "(uid=$username)");
             $info = ldap_get_entries($ds, $sr);
 
-            $_SESSION['prof_name'] = $info[0]['cn'][0];
+            $_SESSION['name'] = $info[0]['cn'][0];
             $str = explode(",", $info[0]['dn'])[2];
             $_SESSION['department'] = $department_to_very_short[substr($str, (strrpos($str, "=")) + 1)];
+            $_SESSION['password'] = $password;
 
-            header("location: faculty.php");
+            header("location: redirect.php");
         } else {
+            session_destroy();
             die('Please enter your LDAP ID in the correct field');
         }
     } else {
         echo 'ldap not authenticated :(';
+        session_destroy();
         header("location: index.php?failed=true");
+
     }
 } else if (isset($_POST['login2'])) {
     $username = $_POST['username2'];
@@ -174,48 +179,34 @@ if (isset($_POST['login1'])) {
         if (!is_faculty($username)) {
             $_SESSION['ldap_id'] = $username;
             $_SESSION['user_type'] = 'student';
-            $next_page = "location: student.php";
+            $next_page = "location: redirect.php";
+            $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
+            $sr = ldap_search($ds, "dc=iitb,dc=ac,dc=in", "(uid=$username)");
+            $info = ldap_get_entries($ds, $sr);
+            $_SESSION['name'] = $name = $info[0]['cn'][0]; //This is the name
+            $department = NULL;
 
-            //Add entry to student details database if doesnt already exist
-
-            $check_query = "SELECT ldap_id FROM student_project_details WHERE ldap_id='" . $username . "'";
-            $result = mysqli_query($conn, $check_query);
-            if (mysqli_num_rows($result) == 0) {
-                //Getting Name and department from ldap database
-
-                $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
-                $sr = ldap_search($ds, "dc=iitb,dc=ac,dc=in", "(uid=$username)");
-                $info = ldap_get_entries($ds, $sr);
-                $name = $info[0]['cn'][0]; //This is the name
-                $department = NULL;
-
-                foreach ($department_to_very_short as $short => $long) {
-                    $dep = explode(",", $info[0]['dn'])[2];
-                    if (("ou=" . $short) == $dep) {
-                        $department = $long;
-                        break;
-                    } else {
-                        $department = "Enter Full Name of department here";
-                    }
-                }
-
-                $insert_query = "INSERT INTO student_project_details (ldap_id, name, department) VALUES ('" . $username . "', '" . $name . "', '" . $department . "')";
-                if (mysqli_query($conn, $insert_query)) {
-                    $next_page = "location: my_info.php";
+            foreach ($department_to_very_short as $short => $long) {
+                $dep = explode(",", $info[0]['dn'])[2];
+                if (("ou=" . $short) == $dep) {
+                    $_SESSION['department'] = $department = $long;
+                    break;
                 } else {
-                    echo mysqli_error($conn);
-                    die();
+                    $_SESSION['department'] = $department = "Enter Full Name of department here";
                 }
             }
+            $_SESSION['password'] = $password;
             header($next_page);
-        } else {
+        }
+        else {
+            session_destroy();
             die('Please enter your LDAP ID in the correct field');
         }
     } else {
+        session_destroy();
         echo 'ldap not authenticated :(';
         header("location: index.php?failed=true");
     }
-    mysqli_close($conn);
 }
 ?>
 
