@@ -35,5 +35,7 @@ $opts = array('http' =>
 $context  = stream_context_create($opts);
 $result = file_get_contents($url, false, $context);
 
+echo $result;
+
 header("location: http://138.197.90.80/ppa/create_user/".strval($result)."/");
 // header("location: http://127.0.0.1:8000/ppa/create_user/".strval($result)."/");
