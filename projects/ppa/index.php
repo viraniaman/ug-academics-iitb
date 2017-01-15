@@ -9,13 +9,13 @@ try
 require_once 'department_assoc_array.php';
 session_start();
 
-// if (isset($_SESSION['ldap_id'])) {
-//     if ($_SESSION['user_type'] == 'student') {
-//         header("location: http://127.0.0.1:8000/ppa/student/");
-//     } else {
-//         header("location: http://127.0.0.1:8000/ppa/professor/");
-//     }
-// }
+if (isset($_SESSION['ldap_id'])) {
+    if ($_SESSION['user_type'] == 'student') {
+        header("location: http://138.197.90.80/ppa/student/");
+    } else {
+        header("location: http://138.197.90.80/ppa/professor/");
+    }
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
