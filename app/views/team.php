@@ -221,7 +221,7 @@
   				<div class="col-md-12" id="sss"><br><br>
 				<h2></h2>
 				<div class="row">
-					<div class="col-md-6">
+					<!--<div class="col-md-6">
 					<div class="post_title"><h2>ISAA MSc</h2><hr></div>
 					<div class="profile_image">
 						<img src="./img/pankaj.jpg" border="40" class="profile_pic">
@@ -231,7 +231,7 @@
 						<span class="glyphicon glyphicon-earphone"></span> 9167852571<br>
 						<span class="glyphicon glyphicon-envelope"></span> pankajgangwar243@gmail.com
 					</div>
-					</div>
+					</div>-->
 
 					<div class="col-md-6">
 					<div class="post_title"><h2>ISIR</h2><hr></div>
