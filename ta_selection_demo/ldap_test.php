@@ -13,10 +13,8 @@ function print_ldap_info($ldap_id) {
     $ds = ldap_connect("ldap.iitb.ac.in") or die("Unable to connect to LDAP server. Please try again later.");
     $sr = ldap_search($ds, "dc=iitb,dc=ac,dc=in", "(uid=$ldap_id)");
     $info = ldap_get_entries($ds, $sr);
-
-    $a['prof_name'] = $info[0];
     
-    var_dump($a);
+    var_dump($info);
     
 //    $l_id = $info[0]['dn'];
 //    $l_id_arr = explode(",",$l_id);
@@ -24,5 +22,5 @@ function print_ldap_info($ldap_id) {
 //    return $user_is_faculty;
 }
 
-print_ldap_info('kalro.arti');
+print_ldap_info('naay_balodia');
 
